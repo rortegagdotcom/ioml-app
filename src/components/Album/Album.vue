@@ -3,9 +3,7 @@
 </script>
 
 <template>
-    <h1>Album Form</h1>
+  <p>Album</p>
 </template>
 
-<style>
-
-</style>
+<style></style>
