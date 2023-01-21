@@ -5,27 +5,33 @@ export default {
 </script>
 
 <template>
-  <nav class="flex items-center justify-between p-5 bg-gray-100 dark:bg-gray-800">
+  <nav
+    class="flex items-center justify-between p-5 bg-gray-100 dark:bg-gray-800"
+  >
     <button class="bg-gray-200 p-2 rounded-full dark:bg-gray-700">
-        <router-link to="/albums/new">
-            <picture>
-                <source media="(prefers-color-scheme: dark)" srcset="/add-dark.svg">
-                <img class="h-12" src="/add-light.svg" alt="Crear Album">
-            </picture>
-        </router-link>
+      <router-link to="/albums/new">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="/add-dark.svg" />
+          <img class="h-12" src="/add-light.svg" alt="Crear Album" />
+        </picture>
+      </router-link>
     </button>
     <router-link to="/">
-        <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="/ioml-logotipe-2-dark.svg">
-            <img class="h-24" src="/ioml-logotipe-2-light.svg" alt="IOML App">
-        </picture>
+      <picture>
+        <source
+          media="(prefers-color-scheme: dark)"
+          srcset="/ioml-logotipe-2-dark.svg"
+        />
+        <img class="h-24" src="/ioml-logotipe-2-light.svg" alt="IOML App" />
+      </picture>
     </router-link>
-    <div class="h-12 rounded-full">
-        <p>U</p>
+    <div>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="/add-dark.svg" />
+        <img class="h-12" src="/add-light.svg" alt="Crear Album" />
+      </picture>
     </div>
   </nav>
 </template>
 
-<style>
-
-</style>
+<style></style>

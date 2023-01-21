@@ -1,9 +1,13 @@
 <script>
-
+export default {
+  name: "Album",
+};
 </script>
 
 <template>
-  <p>Album</p>
+  <div>
+    <p>Esto es un Album</p>
+  </div>
 </template>
 
 <style></style>
