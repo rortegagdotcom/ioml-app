@@ -1,28 +1,24 @@
-<script>
-import { defineComponent } from "vue";
-import Album from "./Album.vue";
+<script setup>
+import { ref, watchEffect } from 'vue';
+import axios from 'axios';
+import Album from './Album.vue';
 
-export default defineComponent({
-  name: "AlbumsList",
-  components: {
-    Album,
-  },
+const albums = ref(null);
+
+watchEffect(async () => {
+  await await axios
+    .get('http://localhost:5748/api/albums')
+    .then((res) => {
+      albums.value = res.data[0];
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 });
 </script>
 
 <template>
-  <div class="grid grid-cols-4 gap-4 justify-items-center">
-    <Album />
-    <Album />
-    <Album />
-    <Album />
-    <Album />
-    <Album />
-    <Album />
-    <Album />
-    <Album />
-    <Album />
-    <Album />
-    <Album />
+  <div class="grid grid-auto-columns gap-4 justify-items-center">
+    <Album v-for="album in albums" :album="album" :key="album.id" />
   </div>
 </template>

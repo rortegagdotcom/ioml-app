@@ -1,12 +1,12 @@
-<script>
-export default {
-  name: "Album",
-};
+<script setup>
+const props = defineProps({
+  album: Object,
+});
 </script>
 
 <template>
   <div>
-    <p>Esto es un Album</p>
+    <h1>{{ album.name }}</h1>
   </div>
 </template>
 

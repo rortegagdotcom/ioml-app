@@ -1,21 +1,12 @@
-<script>
-import { defineComponent } from "vue";
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
-
-export default defineComponent({
-  name: "App",
-  components: {
-    Header,
-    Footer,
-  },
-});
+<script setup>
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 </script>
 
 <template>
   <Header />
 
-  <main class="container py-5">
+  <main class="px-12 py-5">
     <router-view />
   </main>
 
