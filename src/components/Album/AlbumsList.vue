@@ -1,20 +1,24 @@
-<script setup>
+<script>
 import { ref, watchEffect } from 'vue';
 import axios from 'axios';
 import Album from './Album.vue';
 
-const albums = ref(null);
+export default {
+  setup() {
+    const albums = ref(null);
 
-watchEffect(async () => {
-  await await axios
-    .get('http://localhost:5748/api/albums')
-    .then((res) => {
-      albums.value = res.data[0];
-    })
-    .catch((error) => {
-      console.error(error);
+    watchEffect(async () => {
+      await await axios
+        .get('http://localhost:5748/api/albums')
+        .then((res) => {
+          albums.value = res.data[0];
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     });
-});
+  },
+};
 </script>
 
 <template>

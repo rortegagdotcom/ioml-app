@@ -1,4 +1,8 @@
-<script setup></script>
+<script>
+export default {
+  setup() {},
+};
+</script>
 
 <template>
   <nav

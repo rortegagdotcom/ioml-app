@@ -1,5 +1,11 @@
-<script setup></script>
+<script>
+export default {
+  setup() {},
+};
+</script>
 
-<template></template>
+<template>
+  <h1>Photo Delete</h1>
+</template>
 
 <style></style>

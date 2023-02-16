@@ -1,7 +1,11 @@
-<script setup>
-const props = defineProps({
-  album: Object,
-});
+<script>
+export default {
+  setup() {
+    const props = defineProps({
+      album: Object,
+    });
+  },
+};
 </script>
 
 <template>

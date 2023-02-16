@@ -1,4 +1,8 @@
-<script setup></script>
+<script>
+export default {
+  setup() {},
+};
+</script>
 
 <template>
   <footer class="flex justify-center w-full bg-gray-100 dark:bg-gray-800">
