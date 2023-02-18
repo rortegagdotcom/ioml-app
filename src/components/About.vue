@@ -1,8 +1,4 @@
-<script>
-export default {
-  setup() {},
-};
-</script>
+<script setup></script>
 
 <template>
   <article class="flex justify-center items-center flex-col">

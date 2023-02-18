@@ -1,34 +1,42 @@
-<script>
+<script setup>
 import axios from 'axios';
 import { ref } from 'vue';
 
-export default {
-  setup() {
-    const albumName = ref('');
+const albumName = ref('');
 
-    async function createAlbum() {
-      try {
-        await axios.post('http://localhost:5748/api/albums', {
-          name: albumName.value,
-        });
-        console.log(`Album created ${albumName.value}`);
-      } catch (error) {
-        console.error(error);
+async function createAlbum() {
+  await axios
+    .post(
+      'http://localhost:5748/api/albums',
+      {
+        name: albumName.value,
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
       }
-    }
+    )
+    .then((response) => console.log('Datos enviados:', response.data))
+    .catch((error) => {
+      console.error('Error al enviar los datos:', error);
+    });
 
-    albumName.value = '';
-
-    return { albumName, createAlbum };
-  },
-};
+  albumName.value = '';
+}
 </script>
 
 <template>
-  <form id="create-album">
+  <form id="create-album" @submit.prevent="createAlbum">
     <label for="album-name">Album Name:</label>
     <br />
-    <input type="text" id="album-name" v-model="albumName" required />
+    <input
+      type="text"
+      id="album-name"
+      name="album-name"
+      v-model="albumName"
+      required
+    />
     <br />
     <button type="submit">Create Album</button>
   </form>

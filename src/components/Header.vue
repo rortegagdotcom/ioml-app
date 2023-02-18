@@ -1,9 +1,5 @@
-<script>
+<script setup>
 import Navbar from './Navbar.vue';
-
-export default {
-  setup() {},
-};
 </script>
 
 <template>
