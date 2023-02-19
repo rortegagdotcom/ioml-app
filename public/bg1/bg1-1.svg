@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#F4FF35;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#797E20;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Nueva_muestra_de_motivo_1);}
+</style>
+<pattern  width="150" height="200" patternUnits="userSpaceOnUse" id="Nueva_muestra_de_motivo_1" viewBox="0 -200 150 200" style="overflow:visible;">
+	<g>
+		<rect y="-200" class="st0" width="150" height="200"/>
+		<g>
+			<g>
+				<path class="st1" d="M75-171.43c-8.28,0-15-6.4-15-14.29C60-193.6,53.28-200,45-200s-15,6.4-15,14.29v28.57
+					c0,7.89,6.72,14.29,15,14.29s15,6.4,15,14.29s6.72,14.29,15,14.29s15-6.4,15-14.29s6.72-14.29,15-14.29s15-6.4,15-14.29v-28.57
+					c0-7.89-6.72-14.29-15-14.29s-15,6.4-15,14.29C90-177.82,83.28-171.43,75-171.43z M150-57.14L150-57.14c-8.28,0-15-6.4-15-14.29
+					s-6.72-14.29-15-14.29s-15,6.4-15,14.29v28.57c0,7.89,6.72,14.29,15,14.29s15,6.4,15,14.29S141.72,0,150,0V-57.14z M15-14.29
+					c0-7.89,6.72-14.29,15-14.29s15-6.4,15-14.29v-28.57c0-7.89-6.72-14.29-15-14.29s-15,6.4-15,14.29l0,0
+					c0,7.89-6.72,14.29-15,14.29V0C8.28,0,15-6.4,15-14.29z"/>
+			</g>
+		</g>
+	</g>
+</pattern>
+<g id="Capa_1">
+</g>
+<g id="Patron">
+	<rect class="st2" width="1920" height="1080"/>
+	<rect class="st3" width="1920" height="1080"/>
+</g>
+</svg>

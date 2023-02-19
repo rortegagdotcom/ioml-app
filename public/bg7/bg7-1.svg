@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#F4FF35;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#797E20;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Nueva_muestra_de_motivo_34);}
+</style>
+<pattern  width="60" height="105" patternUnits="userSpaceOnUse" id="Nueva_muestra_de_motivo_34" viewBox="0 -105 60 105" style="overflow:visible;">
+	<g>
+		<rect y="-105" class="st0" width="60" height="105"/>
+		<g>
+			<g id="hexagons_00000076587573472624614080000013854328581710784950_">
+				<path class="st1" d="M2.14-69.11v32.14l27.84,16.07l27.86-16.07v-32.14L29.98-85.18L2.14-69.11z M29.98-80.23l23.57,13.59v27.19
+					L29.98-25.84L6.43-39.43v-27.21L29.98-80.23z M0-72.88v-4.93l23.53-13.59V-105h4.29v16.07L0-72.86V-72.88z M0-33.19v4.93
+					l23.53,13.59V0h4.29v-17.14L0-33.21V-33.19z M36.43-105v13.61l23.55,13.59H60v4.95h-0.02L32.14-88.93V-105H36.43z M36.43,0
+					v-14.68l23.55-13.59H60v-4.95h-0.02L32.14-17.14V0H36.43z"/>
+			</g>
+		</g>
+	</g>
+</pattern>
+<g id="Capa_1">
+</g>
+<g id="Patron">
+	<rect y="0" class="st2" width="1920" height="1080"/>
+	<rect class="st3" width="1920" height="1080"/>
+</g>
+</svg>
