@@ -18,7 +18,9 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <div class="grid grid-auto-columns gap-4 justify-items-center">
+  <div
+    class="grid grid-auto-columns gap-4 justify-items-center text-black dark:text-white"
+  >
     <Album v-for="album in albums" :album="album" :key="album.id" />
   </div>
 </template>
