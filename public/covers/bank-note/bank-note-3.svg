@@ -1,34 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 26.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;}
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#F9B330;}
 	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#7E5D20;}
-	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Nueva_muestra_de_motivo_76);}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);}
+	.st4{opacity:0.33;fill-rule:evenodd;clip-rule:evenodd;}
 </style>
 <pattern  width="150" height="40" patternUnits="userSpaceOnUse" id="Nueva_muestra_de_motivo_76" viewBox="0 -40 150 40" style="overflow:visible;">
 	<g>
 		<rect y="-40" class="st0" width="150" height="40"/>
-		<g id="Page-1_00000090977742906706587080000003308455974726326666_">
-			<g id="bank-note_00000084532241739995225130000003319793032885221038_">
-				<path id="Combined-Shape_00000171716025272582349130000008425194672814724992_" class="st1" d="M31.78,0h-9.5
-					c3.09-1.2,6.37-2.7,10.09-4.55c0.54-0.27,2.39-1.19,2.65-1.32C49.72-13.21,59.06-16,75-16c15.84,0,23.83,2.56,38.06,10.14
-					c4.64,2.47,8.58,4.4,12.35,5.86h-9.34c-1.32-0.66-2.69-1.38-4.13-2.14C98.04-9.56,90.41-12,75-12c-15.53,0-24.54,2.7-38.94,9.87
-					C35.81-2,33.95-1.07,33.41-0.8C32.86-0.53,32.31-0.26,31.78,0L31.78,0z M31.78-40h-9.5C14.93-37.15,8.62-36,0-36v4l0,0
-					C12.12-32,19.89-34.22,31.78-40L31.78-40z M116.07-40h9.34c7.52,2.92,14.33,4,24.59,4v4C135.75-32,127.86-34.07,116.07-40
-					L116.07-40z M0-12L0-12v-4c12.25,0,19.84-2.32,32.36-8.55c0.54-0.27,2.39-1.19,2.65-1.32C49.72-33.21,59.06-36,75-36
-					c15.84,0,23.83,2.56,38.06,10.14C126.96-18.44,134.59-16,150-16v4c-15.84,0-23.83-2.56-38.06-10.14C98.04-29.56,90.41-32,75-32
-					c-15.53,0-24.54,2.7-38.94,9.87c-0.25,0.13-2.11,1.05-2.65,1.32C20.58-14.42,12.66-12,0-12L0-12z"/>
+		<g>
+			<rect y="-40" class="st0" width="150" height="40"/>
+			<g id="Page-1_00000072271347715555767580000009163964742087372201_">
+				<g id="bank-note_00000094613892594195329590000017396137290449709499_">
+					<path id="Combined-Shape_00000165949631046628709960000006203407307047262383_" class="st1" d="M31.78-40h-9.5
+						c3.09,1.2,6.37,2.7,10.09,4.55c0.54,0.27,2.39,1.19,2.65,1.32C49.72-26.79,59.06-24,75-24c15.84,0,23.83-2.56,38.06-10.14
+						c4.64-2.47,8.58-4.4,12.35-5.86h-9.34c-1.32,0.66-2.69,1.38-4.13,2.14C98.04-30.44,90.41-28,75-28
+						c-15.53,0-24.54-2.7-38.94-9.87c-0.25-0.13-2.11-1.06-2.65-1.33C32.86-39.47,32.31-39.74,31.78-40L31.78-40z M31.78,0h-9.5
+						C14.93-2.85,8.62-4,0-4v-4l0,0C12.12-8,19.89-5.78,31.78,0L31.78,0z M116.07,0h9.34c7.52-2.92,14.33-4,24.59-4v-4
+						C135.75-8,127.86-5.93,116.07,0L116.07,0z M0-28L0-28v4c12.25,0,19.84,2.32,32.36,8.55c0.54,0.27,2.39,1.19,2.65,1.32
+						C49.72-6.79,59.06-4,75-4c15.84,0,23.83-2.56,38.06-10.14C126.96-21.56,134.59-24,150-24v-4c-15.84,0-23.83,2.56-38.06,10.14
+						C98.04-10.44,90.41-8,75-8c-15.53,0-24.54-2.7-38.94-9.87c-0.25-0.13-2.11-1.05-2.65-1.32C20.58-25.58,12.66-28,0-28L0-28z"/>
+				</g>
 			</g>
 		</g>
 	</g>
 </pattern>
-<g id="Capa_1">
-</g>
 <g id="Patron">
-	<rect class="st2" width="1920" height="1080"/>
-	<rect class="st3" width="1920" height="1080"/>
+	<rect class="st2" width="250" height="250"/>
+	<pattern  id="SVGID_1_" xlink:href="#Nueva_muestra_de_motivo_76" patternTransform="matrix(1 0 0 -1 -84 -14698)">
+	</pattern>
+	<rect class="st3" width="250" height="250"/>
 </g>
+<rect class="st4" width="250" height="250"/>
 </svg>
