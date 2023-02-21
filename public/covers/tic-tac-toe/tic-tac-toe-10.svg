@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 26.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:none;}
+	.st0{fill:none;}
 	.st1{fill-rule:evenodd;clip-rule:evenodd;}
 	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#505050;}
-	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Nueva_muestra_de_motivo_63);}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);}
+	.st4{opacity:0.33;fill-rule:evenodd;clip-rule:evenodd;}
 </style>
-<pattern  width="79.04" height="79.04" patternUnits="userSpaceOnUse" id="Nueva_muestra_de_motivo_63" viewBox="0 -79.04 79.04 79.04" style="overflow:visible;">
+<pattern  width="79.04" height="79.04" patternUnits="userSpaceOnUse" id="Nueva_muestra_de_motivo_110" viewBox="0 -79.04 79.04 79.04" style="overflow:visible;">
 	<g>
 		<rect y="-79.04" class="st0" width="79.04" height="79.04"/>
-		<g id="Page-1_00000062879186564405402870000014282646275960434597_">
-			<g id="tic-tac-toe_00000134946976840676117490000015810744340686909841_">
-				<path id="Combined-Shape_00000096039467940621674400000016975276327833123249_" class="st1" d="M0.13-68.91
-					c0-5.52,4.48-10,10-10s10,4.48,10,10c0,5.52-4.48,10-10,10S0.13-63.39,0.13-68.91z M2.63-68.91c0-4.14,3.36-7.5,7.5-7.5
-					s7.5,3.36,7.5,7.5s-3.36,7.5-7.5,7.5S2.63-64.77,2.63-68.91z M59.34-61.48l-1.77,1.77l-7.44-7.44l-7.44,7.44l-1.77-1.77
-					l7.44-7.44l-7.44-7.44l1.77-1.77l7.44,7.44l7.44-7.44l1.77,1.77l-7.44,7.44L59.34-61.48z M40.13-28.91c0-5.52,4.48-10,10-10
-					s10,4.48,10,10s-4.48,10-10,10S40.13-23.39,40.13-28.91z M42.63-28.91c0-4.14,3.36-7.5,7.5-7.5s7.5,3.36,7.5,7.5
-					s-3.36,7.5-7.5,7.5S42.63-24.77,42.63-28.91z M19.34-21.48l-1.77,1.77l-7.44-7.44l-7.44,7.44l-1.77-1.77l7.44-7.44l-7.44-7.44
-					l1.77-1.77l7.44,7.44l7.44-7.44l1.77,1.77l-7.44,7.44L19.34-21.48z"/>
+		<g>
+			<rect y="-79.04" class="st0" width="79.04" height="79.04"/>
+			<g id="Page-1_00000033361536500377294300000003977308402639576708_">
+				<g id="tic-tac-toe_00000140702130406053532930000009197198292416036229_">
+					<path id="Combined-Shape_00000100382905516081556490000004088630401668360888_" class="st1" d="M0.13-10.13
+						c0,5.52,4.48,10,10,10s10-4.48,10-10s-4.48-10-10-10S0.13-15.65,0.13-10.13z M2.63-10.13c0,4.14,3.36,7.5,7.5,7.5
+						s7.5-3.36,7.5-7.5s-3.36-7.5-7.5-7.5S2.63-14.27,2.63-10.13z M59.34-17.56l-1.77-1.77l-7.44,7.44l-7.44-7.44l-1.77,1.77
+						l7.44,7.44l-7.44,7.44l1.77,1.77l7.44-7.44l7.44,7.44l1.77-1.77l-7.44-7.44L59.34-17.56z M40.13-50.13c0,5.52,4.48,10,10,10
+						s10-4.48,10-10s-4.48-10-10-10S40.13-55.65,40.13-50.13z M42.63-50.13c0,4.14,3.36,7.5,7.5,7.5s7.5-3.36,7.5-7.5
+						s-3.36-7.5-7.5-7.5S42.63-54.27,42.63-50.13z M19.34-57.56l-1.77-1.77l-7.44,7.44l-7.44-7.44l-1.77,1.77l7.44,7.44l-7.44,7.44
+						l1.77,1.77l7.44-7.44l7.44,7.44l1.77-1.77l-7.44-7.44L19.34-57.56z"/>
+				</g>
 			</g>
 		</g>
 	</g>
 </pattern>
-<g id="Capa_1">
-</g>
 <g id="Patron">
-	<rect class="st2" width="1920" height="1080"/>
-	<rect class="st3" width="1920" height="1080"/>
+	<rect class="st2" width="250" height="250"/>
+	<pattern  id="SVGID_1_" xlink:href="#Nueva_muestra_de_motivo_110" patternTransform="matrix(1 0 0 -1 -88.2 -15672.5996)">
+	</pattern>
+	<rect class="st3" width="250" height="250"/>
 </g>
+<rect class="st4" width="250" height="250"/>
 </svg>

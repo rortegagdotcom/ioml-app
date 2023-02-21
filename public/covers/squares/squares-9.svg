@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 26.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:none;}
+	.st0{fill:none;}
 	.st1{fill:#F930F5;}
 	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#7E2070;}
-	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Nueva_muestra_de_motivo_12);}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);}
+	.st4{opacity:0.33;fill-rule:evenodd;clip-rule:evenodd;}
 </style>
-<pattern  width="100.36" height="100.36" patternUnits="userSpaceOnUse" id="Nueva_muestra_de_motivo_12" viewBox="0 -200.73 100.36 100.36" style="overflow:visible;">
+<pattern  width="100.36" height="100.36" patternUnits="userSpaceOnUse" id="Nueva_muestra_de_motivo_79" viewBox="0 -100.36 100.36 100.36" style="overflow:visible;">
 	<g>
+		<rect y="-100.36" class="st0" width="100.36" height="100.36"/>
 		<g>
-			<rect y="-200.73" class="st0" width="100.36" height="100.36"/>
-			<rect x="100.36" y="-200.73" class="st0" width="100.36" height="100.36"/>
-			<rect y="-100.36" class="st0" width="100.36" height="100.36"/>
-			<rect x="100.36" y="-100.36" class="st0" width="100.36" height="100.36"/>
-		</g>
-		<g>
-			<g id="Artboard-5_00000005230045931334249890000007548040841344679056_">
-				<path class="st1" d="M19.56-181.17h26.25v26.25H19.56V-181.17z M15.18-150.54h35v-35h-35V-150.54z"/>
+			<g>
+				<rect y="-100.36" class="st0" width="100.36" height="100.36"/>
+				<rect x="100.36" y="-100.36" class="st0" width="100.36" height="100.36"/>
+				<rect y="-200.73" class="st0" width="100.36" height="100.36"/>
+				<rect x="100.36" y="-200.73" class="st0" width="100.36" height="100.36"/>
+			</g>
+			<g>
+				<g id="Artboard-5_00000012449786228794983590000008827697122354268860_">
+					<path class="st1" d="M19.56-19.56h26.25v-26.25H19.56V-19.56z M15.18-50.19h35v35h-35V-50.19z"/>
+				</g>
 			</g>
 		</g>
 	</g>
 </pattern>
-<g id="Capa_1">
-</g>
 <g id="Patron">
-	<rect class="st2" width="1920" height="1080"/>
-	<rect class="st3" width="1920" height="1080"/>
+	<rect class="st2" width="250" height="250"/>
+	<pattern  id="SVGID_1_" xlink:href="#Nueva_muestra_de_motivo_79" patternTransform="matrix(1 0 0 -1 -63.24 -15860.8496)">
+	</pattern>
+	<rect class="st3" width="250" height="250"/>
 </g>
+<rect class="st4" width="250" height="250"/>
 </svg>

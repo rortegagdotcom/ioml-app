@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 26.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;}
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#A430F9;}
 	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#56207E;}
-	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Nueva_muestra_de_motivo_21);}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);}
+	.st4{opacity:0.33;fill-rule:evenodd;clip-rule:evenodd;}
 </style>
-<pattern  width="75" height="100" patternUnits="userSpaceOnUse" id="Nueva_muestra_de_motivo_21" viewBox="0 -100 75 100" style="overflow:visible;">
+<pattern  width="75" height="100" patternUnits="userSpaceOnUse" id="Nueva_muestra_de_motivo_118" viewBox="0 -100 75 100" style="overflow:visible;">
 	<g>
 		<rect y="-100" class="st0" width="75" height="100"/>
 		<g>
+			<rect y="-100" class="st0" width="75" height="100"/>
 			<g>
-				<path class="st1" d="M15-75l15-25H0L15-75z M60,0l15-25H45L60,0z"/>
+				<g>
+					<path class="st1" d="M15-25L30,0H0L15-25z M60-100l15,25H45L60-100z"/>
+				</g>
 			</g>
 		</g>
 	</g>
 </pattern>
-<g id="Capa_1">
-</g>
 <g id="Patron">
-	<rect class="st2" width="1920" height="1080"/>
-	<rect class="st3" width="1920" height="1080"/>
+	<rect class="st2" width="250" height="250"/>
+	<pattern  id="SVGID_1_" xlink:href="#Nueva_muestra_de_motivo_118" patternTransform="matrix(1 0 0 -1 -19 -15763)">
+	</pattern>
+	<rect class="st3" width="250" height="250"/>
 </g>
+<rect class="st4" width="250" height="250"/>
 </svg>

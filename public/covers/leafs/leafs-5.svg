@@ -1,31 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 26.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;}
 	.st1{fill:#30F9EE;}
 	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#207E75;}
-	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Nueva_muestra_de_motivo_46);}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);}
+	.st4{opacity:0.33;fill-rule:evenodd;clip-rule:evenodd;}
 </style>
-<pattern  width="120" height="75" patternUnits="userSpaceOnUse" id="Nueva_muestra_de_motivo_46" viewBox="0 -75 120 75" style="overflow:visible;">
+<pattern  width="120" height="75" patternUnits="userSpaceOnUse" id="Nueva_muestra_de_motivo_65" viewBox="0 -75 120 75" style="overflow:visible;">
 	<g>
 		<rect y="-75" class="st0" width="120" height="75"/>
-		<path class="st1" d="M36.72,0c9.16-9.48,12.72-23.28,9.34-36.21c-12.62-3.48-26.09,0.24-35.34,9.75C3.89-19.46,0.03-9.94,0,0
-			H36.72z M118.76-73.57c-6.16-1.7-12.64-1.7-18.79-0.01c-19.42,5.34-30.97,25.91-25.78,45.95c6.16,1.7,12.65,1.7,18.82,0
-			c19.42-5.36,30.95-25.93,25.76-45.96V-73.57z M1.36-65.16c12.56,3.47,25.96-0.23,35.16-9.71L36.67-75H0.13
-			C0.12-71.68,0.53-68.37,1.36-65.16z M3.64,0C3.66-10.25,8.21-19.92,16-26.29v18.34L8.25,0h-4.6H3.64z M13.45,0l29.93-30.79
-			C44.86-19.04,40.26-7.35,31.25,0H13.44H13.45z M40.8-33.45L19.67-11.72v-17.19C26.11-32.89,33.58-34.39,40.8-33.45z M116.08-68.19
-			c0.36,2.89,0.36,5.81,0,8.7c-2.33,18.48-18.75,31.52-36.67,29.12L116.08-68.19z M92.47-66.34c6.4-3.94,13.84-5.44,21.03-4.5
-			l-21,21.67v-17.16L92.47-66.34z M88.85-63.71v18.3L76.83-33.04c-1.24-10.01,1.87-20.49,9.33-28.18
-			C87.03-62.12,87.92-62.94,88.85-63.71z M6.62-67.91L13.49-75h17.74C24.3-69.29,15.42-66.74,6.62-67.91z M3.76-75h4.58l-4.31,4.44
-			C3.85-72.04,3.76-73.5,3.78-75H3.76z"/>
+		<g>
+			<rect y="-75" class="st0" width="120" height="75"/>
+			<path class="st1" d="M36.72-75c9.16,9.48,12.72,23.28,9.34,36.21c-12.62,3.48-26.09-0.24-35.34-9.75C3.89-55.54,0.03-65.06,0-75
+				H36.72z M118.76-1.43c-6.16,1.7-12.64,1.7-18.79,0.01C80.55-6.76,69-27.33,74.19-47.37c6.16-1.7,12.65-1.7,18.82,0
+				c19.42,5.36,30.95,25.93,25.76,45.96v-0.02H118.76z M1.36-9.84c12.56-3.47,25.96,0.23,35.16,9.71L36.67,0H0.13
+				C0.12-3.32,0.53-6.63,1.36-9.84z M3.64-75C3.66-64.75,8.21-55.08,16-48.71v-18.34L8.25-75H3.64L3.64-75z M13.45-75l29.93,30.79
+				C44.86-55.96,40.26-67.65,31.25-75H13.44H13.45z M40.8-41.55L19.67-63.28v17.19C26.11-42.11,33.58-40.61,40.8-41.55z
+				 M116.08-6.81c0.36-2.89,0.36-5.81,0-8.7c-2.33-18.48-18.75-31.52-36.67-29.12L116.08-6.81z M92.47-8.66
+				c6.4,3.94,13.84,5.44,21.03,4.5l-21-21.67v17.16L92.47-8.66z M88.85-11.29v-18.3L76.83-41.96c-1.24,10.01,1.87,20.49,9.33,28.18
+				C87.03-12.88,87.92-12.06,88.85-11.29z M6.62-7.09L13.49,0h17.74C24.3-5.71,15.42-8.26,6.62-7.09z M3.76,0h4.58L4.03-4.44
+				C3.85-2.96,3.76-1.5,3.78,0H3.76z"/>
+		</g>
 	</g>
 </pattern>
-<g id="Capa_1">
-</g>
 <g id="Patron">
-	<rect class="st2" width="1920" height="1080"/>
-	<rect class="st3" width="1920" height="1080"/>
+	<rect class="st2" width="250" height="250"/>
+	<pattern  id="SVGID_1_" xlink:href="#Nueva_muestra_de_motivo_65" patternTransform="matrix(1 0 0 -1 -229 -15713)">
+	</pattern>
+	<rect class="st3" width="250" height="250"/>
 </g>
+<rect y="0" class="st4" width="250" height="250"/>
 </svg>
