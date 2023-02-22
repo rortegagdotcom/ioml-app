@@ -5,6 +5,8 @@ import { ref } from 'vue';
 import IOMLTab from '../IOMLTab/IOMLTab.vue';
 
 const albumName = ref('');
+const coverName = ref('');
+const activeTab = ref(1);
 
 async function createAlbum() {
   await axios
@@ -12,6 +14,7 @@ async function createAlbum() {
       'http://localhost:5748/api/albums',
       {
         name: albumName.value,
+        cover: coverName.value,
       },
       {
         headers: {
@@ -25,6 +28,11 @@ async function createAlbum() {
     });
 
   albumName.value = '';
+  coverName.value = '';
+}
+
+function setActiveTab(index) {
+  activeTab.value = index;
 }
 </script>
 
@@ -51,7 +59,7 @@ async function createAlbum() {
         />
       </div>
 
-      <IOMLTab />
+      <IOMLTab :activeTab="activeTab" :setActiveTab="setActiveTab" />
 
       <div class="flex justify-center items-center pt-5">
         <button
