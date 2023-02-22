@@ -34,6 +34,10 @@ async function createAlbum() {
 function setActiveTab(index) {
   activeTab.value = index;
 }
+
+function handleCoverClicked(cover) {
+  coverName.value = cover;
+}
 </script>
 
 <template>
@@ -59,7 +63,11 @@ function setActiveTab(index) {
         />
       </div>
 
-      <IOMLTab :activeTab="activeTab" :setActiveTab="setActiveTab" />
+      <IOMLTab
+        :activeTab="activeTab"
+        :setActiveTab="setActiveTab"
+        @cover-clicked="handleCoverClicked"
+      />
 
       <div class="flex justify-center items-center pt-5">
         <button

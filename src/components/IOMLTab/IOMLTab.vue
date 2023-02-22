@@ -45,6 +45,13 @@ const activeTab = ref(0);
 function setActiveTab(index) {
   activeTab.value = index;
 }
+
+const emit = defineEmits(['cover-clicked']);
+
+function handleCoverClick(cover) {
+  cover = cover.substring(cover.lastIndexOf('/') + 1, cover.length - 4);
+  emit('cover-clicked', cover);
+}
 </script>
 
 <template>
@@ -70,92 +77,92 @@ function setActiveTab(index) {
   <div class="py-4">
     <div class="grid grid-cols-10" v-if="activeTab === 0">
       <div v-for="(cover, index) in coversBankNote" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
     <div class="grid grid-cols-10" v-if="activeTab === 1">
       <div v-for="(cover, index) in coversBricks" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
     <div class="grid grid-cols-10" v-if="activeTab === 2">
       <div v-for="(cover, index) in coversBubbles" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
     <div class="grid grid-cols-10" v-if="activeTab === 3">
       <div v-for="(cover, index) in coversCircles" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
     <div class="grid grid-cols-10" v-if="activeTab === 4">
       <div v-for="(cover, index) in coversCross" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
     <div class="grid grid-cols-10" v-if="activeTab === 5">
       <div v-for="(cover, index) in coversDiamonds" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
     <div class="grid grid-cols-10" v-if="activeTab === 6">
       <div v-for="(cover, index) in coversDomino" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
     <div class="grid grid-cols-10" v-if="activeTab === 7">
       <div v-for="(cover, index) in coversDots" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
     <div class="grid grid-cols-10" v-if="activeTab === 8">
       <div v-for="(cover, index) in coversHexagons" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
     <div class="grid grid-cols-10" v-if="activeTab === 9">
       <div v-for="(cover, index) in coversJigsaw" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
     <div class="grid grid-cols-10" v-if="activeTab === 10">
       <div v-for="(cover, index) in coversJupiter" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
     <div class="grid grid-cols-10" v-if="activeTab === 11">
       <div v-for="(cover, index) in coversLeafs" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
     <div class="grid grid-cols-10" v-if="activeTab === 12">
       <div v-for="(cover, index) in coversMelt" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
     <div class="grid grid-cols-10" v-if="activeTab === 13">
       <div v-for="(cover, index) in coversSquares" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
     <div class="grid grid-cols-10" v-if="activeTab === 14">
       <div v-for="(cover, index) in coversStripes" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
     <div class="grid grid-cols-10" v-if="activeTab === 15">
       <div v-for="(cover, index) in coversTicTacToe" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
     <div class="grid grid-cols-10" v-if="activeTab === 16">
       <div v-for="(cover, index) in coversTriangles" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
     <div class="grid grid-cols-10" v-if="activeTab === 17">
       <div v-for="(cover, index) in coversYYY" :key="index">
-        <img class="w-32" :src="cover" @click="coverName = cover" />
+        <img class="w-32" :src="cover" @click="handleCoverClick(cover)" />
       </div>
     </div>
   </div>
