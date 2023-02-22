@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+<g>
+	<g id="hexagons">
+		<path d="M15.99,6.04l14.86,4.9v9.8l-14.86,4.9l-14.85-4.9v-9.8L15.99,6.04z M3.43,11.69v8.29l12.56,4.14l12.57-4.15v-8.29
+			L15.99,7.55L3.43,11.69z M0,9.8l14.83-4.9V0h-2.29v4.15L0,8.29V9.8L0,9.8z M0,21.88l14.83,4.9V32h-2.29v-4.47L0,23.39V21.88
+			L0,21.88z M17.14,0v4.9l14.85,4.9H32V8.29h-0.01L19.43,4.15V0H17.14z M17.14,32v-5.22l14.85-4.9H32v1.51h-0.01l-12.56,4.14V32
+			H17.14z"/>
+	</g>
+</g>
+</svg>
