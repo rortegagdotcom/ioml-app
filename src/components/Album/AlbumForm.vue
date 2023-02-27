@@ -1,8 +1,11 @@
 <script setup>
 import axios from 'axios';
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 import IOMLTab from '../IOMLTab/IOMLTab.vue';
+
+const router = useRouter();
 
 const albumName = ref('');
 const coverName = ref('');
@@ -29,6 +32,8 @@ async function createAlbum() {
 
   albumName.value = '';
   coverName.value = '';
+
+  router.push('/');
 }
 
 function setActiveTab(index) {
@@ -49,12 +54,12 @@ function handleCoverClicked(cover) {
     <div class="m-5">
       <div>
         <label
-          class="block mb-2 font-medium text-black dark:text-white"
+          class="block mb-2 font-bold text-black dark:text-white"
           for="album-name"
           >Album Name</label
         >
         <input
-          class="block w-full p-4 text-black border border-gray-300 rounded-lg bg-gray-50 sm:text-md dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+          class="block w-full p-5 text-black border border-gray-300 rounded-lg bg-gray-50 sm:text-md dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
           type="text"
           id="album-name"
           name="album-name"
@@ -62,13 +67,16 @@ function handleCoverClicked(cover) {
           required
         />
       </div>
-
+      <label
+        class="block mt-4 mb-2 font-bold text-black dark:text-white"
+        for="album-cover"
+        >Select a Cover</label
+      >
       <IOMLTab
         :activeTab="activeTab"
         :setActiveTab="setActiveTab"
         @cover-clicked="handleCoverClicked"
       />
-
       <div class="flex justify-center items-center pt-5">
         <button
           class="text-white bg-gradient-to-br from-pink-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2"
