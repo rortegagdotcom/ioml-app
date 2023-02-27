@@ -8,7 +8,7 @@
       <router-link to="/albums/new">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="/add-dark.svg" />
-          <img class="h-12" src="/add-light.svg" alt="Crear Album" />
+          <img class="h-12" src="/add-light.svg" alt="Add Album" />
         </picture>
       </router-link>
     </button>
@@ -24,7 +24,7 @@
     <div>
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="/add-dark.svg" />
-        <img class="h-12" src="/add-light.svg" alt="Crear Album" />
+        <img class="h-12" src="/add-light.svg" />
       </picture>
     </div>
   </nav>
