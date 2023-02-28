@@ -1,39 +1,49 @@
 .bg-squares-1 {
   background-image: url('/covers/squares/squares-1.svg');
+  background-size: cover;
 }
 
 .bg-squares-2 {
   background-image: url('/covers/squares/squares-2.svg');
+  background-size: cover;
 }
 
 .bg-squares-3 {
   background-image: url('/covers/squares/squares-3.svg');
+  background-size: cover;
 }
 
 .bg-squares-4 {
   background-image: url('/covers/squares/squares-4.svg');
+  background-size: cover;
 }
 
 .bg-squares-5 {
   background-image: url('/covers/squares/squares-5.svg');
+  background-size: cover;
 }
 
 .bg-squares-6 {
   background-image: url('/covers/squares/squares-6.svg');
+  background-size: cover;
 }
 
 .bg-squares-7 {
   background-image: url('/covers/squares/squares-7.svg');
+  background-size: cover;
 }
 
 .bg-squares-8 {
   background-image: url('/covers/squares/squares-8.svg');
+  background-size: cover;
 }
 
 .bg-squares-9 {
   background-image: url('/covers/squares/squares-9.svg');
+  background-size: cover;
 }
 
 .bg-squares-10 {
   background-image: url('/covers/squares/squares-10.svg');
+  background-size: cover;
 }

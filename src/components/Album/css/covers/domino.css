@@ -1,39 +1,49 @@
 .bg-domino-1 {
   background-image: url('/covers/domino/domino-1.svg');
+  background-size: cover;
 }
 
 .bg-domino-2 {
   background-image: url('/covers/domino/domino-2.svg');
+  background-size: cover;
 }
 
 .bg-domino-3 {
   background-image: url('/covers/domino/domino-3.svg');
+  background-size: cover;
 }
 
 .bg-domino-4 {
   background-image: url('/covers/domino/domino-4.svg');
+  background-size: cover;
 }
 
 .bg-domino-5 {
   background-image: url('/covers/domino/domino-5.svg');
+  background-size: cover;
 }
 
 .bg-domino-6 {
   background-image: url('/covers/domino/domino-6.svg');
+  background-size: cover;
 }
 
 .bg-domino-7 {
   background-image: url('/covers/domino/domino-7.svg');
+  background-size: cover;
 }
 
 .bg-domino-8 {
   background-image: url('/covers/domino/domino-8.svg');
+  background-size: cover;
 }
 
 .bg-domino-9 {
   background-image: url('/covers/domino/domino-9.svg');
+  background-size: cover;
 }
 
 .bg-domino-10 {
   background-image: url('/covers/domino/domino-10.svg');
+  background-size: cover;
 }

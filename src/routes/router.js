@@ -12,6 +12,11 @@ const routes = [
     component: () => import('../components/Album/AlbumForm.vue'),
   },
   {
+    path: '/albums/edit',
+    name: 'albums-edit',
+    component: () => import('../components/Album/AlbumForm.vue'),
+  },
+  {
     path: '/albums/:id',
     name: 'albums-details',
     component: () => import('../components/Album/AlbumDetail.vue'),

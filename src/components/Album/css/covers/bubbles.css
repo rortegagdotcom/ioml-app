@@ -1,39 +1,49 @@
 .bg-bubbles-1 {
   background-image: url('/covers/bubbles/bubbles-1.svg');
+  background-size: cover;
 }
 
 .bg-bubbles-2 {
   background-image: url('/covers/bubbles/bubbles-2.svg');
+  background-size: cover;
 }
 
 .bg-bubbles-3 {
   background-image: url('/covers/bubbles/bubbles-3.svg');
+  background-size: cover;
 }
 
 .bg-bubbles-4 {
   background-image: url('/covers/bubbles/bubbles-4.svg');
+  background-size: cover;
 }
 
 .bg-bubbles-5 {
   background-image: url('/covers/bubbles/bubbles-5.svg');
+  background-size: cover;
 }
 
 .bg-bubbles-6 {
   background-image: url('/covers/bubbles/bubbles-6.svg');
+  background-size: cover;
 }
 
 .bg-bubbles-7 {
   background-image: url('/covers/bubbles/bubbles-7.svg');
+  background-size: cover;
 }
 
 .bg-bubbles-8 {
   background-image: url('/covers/bubbles/bubbles-8.svg');
+  background-size: cover;
 }
 
 .bg-bubbles-9 {
   background-image: url('/covers/bubbles/bubbles-9.svg');
+  background-size: cover;
 }
 
 .bg-bubbles-10 {
   background-image: url('/covers/bubbles/bubbles-10.svg');
+  background-size: cover;
 }

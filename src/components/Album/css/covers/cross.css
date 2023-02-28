@@ -1,39 +1,49 @@
 .bg-cross-1 {
   background-image: url('/covers/cross/cross-1.svg');
+  background-size: cover;
 }
 
 .bg-cross-2 {
   background-image: url('/covers/cross/cross-2.svg');
+  background-size: cover;
 }
 
 .bg-cross-3 {
   background-image: url('/covers/cross/cross-3.svg');
+  background-size: cover;
 }
 
 .bg-cross-4 {
   background-image: url('/covers/cross/cross-4.svg');
+  background-size: cover;
 }
 
 .bg-cross-5 {
   background-image: url('/covers/cross/cross-5.svg');
+  background-size: cover;
 }
 
 .bg-cross-6 {
   background-image: url('/covers/cross/cross-6.svg');
+  background-size: cover;
 }
 
 .bg-cross-7 {
   background-image: url('/covers/cross/cross-7.svg');
+  background-size: cover;
 }
 
 .bg-cross-8 {
   background-image: url('/covers/cross/cross-8.svg');
+  background-size: cover;
 }
 
 .bg-cross-9 {
   background-image: url('/covers/cross/cross-9.svg');
+  background-size: cover;
 }
 
 .bg-cross-10 {
   background-image: url('/covers/cross/cross-10.svg');
+  background-size: cover;
 }
