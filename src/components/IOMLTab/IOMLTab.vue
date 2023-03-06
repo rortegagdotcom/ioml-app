@@ -62,24 +62,22 @@ function selectImage(index) {
 </script>
 
 <template>
-  <div class="border-b border-gray-200 dark:border-gray-700">
-    <ul
-      class="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-9 gap-2 text-sm font-medium text-center text-gray-500 dark:text-gray-400"
+  <div
+    class="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-9 gap-5 font-medium text-gray-500"
+  >
+    <a
+      href="#"
+      class="inline-flex border rounded-lg w-full justify-center p-3 border-gray-500"
+      :class="{
+        'border-pink-500 text-pink-500 dark:border-orange-500 dark:text-orange-500':
+          activeTab === index,
+      }"
+      @click.prevent="setActiveTab(index)"
+      v-for="(tab, index) in tabs"
+      :key="index"
     >
-      <li v-for="(tab, index) in tabs" :key="index">
-        <a
-          href="#"
-          class="inline-flex p-5 rounded-t-lg hover:text-gray-600"
-          :class="{
-            'text-pink-500 dark:text-orange-500 hover:text-pink-500 hover:border-pink-500 hover:dark:text-orange-500 hover:dark:border-orange-500':
-              activeTab === index,
-          }"
-          @click.prevent="setActiveTab(index)"
-        >
-          {{ tab }}
-        </a>
-      </li>
-    </ul>
+      {{ tab }}
+    </a>
   </div>
   <div class="py-5">
     <div class="grid grid-cols-5 md:grid-cols-10 gap-2" v-if="activeTab === 0">

@@ -75,7 +75,7 @@ function handleCoverClicked(cover) {
     <div class="m-5">
       <div>
         <label
-          class="block mb-2 font-bold text-black dark:text-white"
+          class="inline-block text-lg font-bold text-black dark:text-white mb-2"
           for="album-name"
           >Album Name</label
         >
@@ -89,7 +89,7 @@ function handleCoverClicked(cover) {
         />
       </div>
       <label
-        class="block mt-4 mb-2 font-bold text-black dark:text-white"
+        class="inline-block text-lg mt-5 mb-2 font-bold text-black dark:text-white"
         for="album-cover"
         >Select a Cover</label
       >
