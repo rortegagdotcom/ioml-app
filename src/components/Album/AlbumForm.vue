@@ -1,20 +1,23 @@
 <script setup>
 import axios from 'axios';
 import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 
 import IOMLTab from '../IOMLTab/IOMLTab.vue';
 
 const router = useRouter();
+const route = useRoute();
 
 const albumName = ref('');
 const coverName = ref('');
 const activeTab = ref(1);
 
-async function createAlbum() {
-  await axios
-    .post(
-      'http://localhost:5748/api/albums',
+const albumId = route.params.id;
+
+async function createOrEditAlbum() {
+  if (albumId) {
+    await axios.put(
+      `http://localhost:5748/api/albums/${albumId}`,
       {
         name: albumName.value,
         cover: coverName.value,
@@ -24,11 +27,26 @@ async function createAlbum() {
           'Content-Type': 'application/json',
         },
       }
-    )
-    .then((response) => console.log(response.data))
-    .catch((error) => {
-      console.error('Error when sending data:', error);
-    });
+    );
+  } else {
+    await axios
+      .post(
+        'http://localhost:5748/api/albums',
+        {
+          name: albumName.value,
+          cover: coverName.value,
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      )
+      .then((response) => console.log(response.data))
+      .catch((error) => {
+        console.error('Error when sending data:', error);
+      });
+  }
 
   albumName.value = '';
   coverName.value = '';
@@ -46,10 +64,13 @@ function handleCoverClicked(cover) {
 </script>
 
 <template>
+  <h1 class="text-center text-2xl font-bold text-black dark:text-white">
+    {{ albumId ? 'Update Album' : 'Create Album' }}
+  </h1>
   <form
     class="flex justify-center items-center flex-col"
-    id="create-album"
-    @submit.prevent="createAlbum"
+    id="create-or-edit-album"
+    @submit.prevent="createOrEditAlbum"
   >
     <div class="m-5">
       <div>
@@ -82,7 +103,7 @@ function handleCoverClicked(cover) {
           class="text-white bg-gradient-to-br from-pink-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2"
           type="submit"
         >
-          Create Album
+          {{ albumId ? 'Update Album' : 'Create Album' }}
         </button>
       </div>
     </div>
