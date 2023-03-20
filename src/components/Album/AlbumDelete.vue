@@ -1,10 +1,25 @@
 <script setup>
 import axios from 'axios';
+import { ref, watchEffect } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 
 const router = useRouter();
 const route = useRoute();
+const albums = ref(null);
 const albumId = route.params.id;
+
+watchEffect(async () => {
+  if (albumId) {
+    await await axios
+      .get(`http://localhost:5748/api/albums/${albumId}`)
+      .then((res) => {
+        albums.value = res.data[0];
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+});
 
 function goBack() {
   router.push('/');
@@ -26,19 +41,34 @@ async function handleDeleteAlbum() {
 
 <template>
   <div class="text-black dark:text-white">
-    <h1 class="text-center">Are you sure to delete {{ albumId }}?</h1>
-    <div class="flex flex-wrap flex-row justify-around">
+    <h1 class="text-center text-xl pb-5">Are you sure to delete?</h1>
+    <div class="flex justify-center pb-10">
+      <div
+        :class="`bg-${album.cover}`"
+        class="block w-80 h-96 p-5 border-gray-200 rounded-lg shadow dark:border-gray-700"
+        v-for="album in albums"
+        :album="album"
+        :key="album.id"
+      >
+        <div class="bg-gray-100 dark:bg-gray-900 p-5 rounded-xl">
+          <h3 class="mb-2 text-2xl font-bold text-center">
+            {{ album.name }}
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-wrap flex-row justify-evenly">
       <button
-        class="text-white bg-gradient-to-br from-pink-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2"
+        class="text-white bg-gradient-to-br from-red-500 to-red-900 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 font-medium rounded-lg p-5 text-center mr-2 mb-2"
         @click.prevent="goBack()"
       >
-        No
+        <img class="h-12" src="/cancel-dark.svg" alt="Cancel delete album" />
       </button>
       <button
-        class="text-white bg-gradient-to-br from-pink-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2"
+        class="text-white bg-gradient-to-br from-green-500 to-green-900 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg p-5 text-center mr-2 mb-2"
         @click.prevent="handleDeleteAlbum()"
       >
-        Yes
+        <img class="h-12" src="/accept-dark.svg" alt="Accept delete album" />
       </button>
     </div>
   </div>
