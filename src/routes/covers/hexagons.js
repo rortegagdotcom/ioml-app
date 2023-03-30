@@ -8,7 +8,6 @@ const coversHexagons = [
   '/covers/hexagons/hexagons-7.svg',
   '/covers/hexagons/hexagons-8.svg',
   '/covers/hexagons/hexagons-9.svg',
-  '/covers/hexagons/hexagons-10.svg',
 ];
 
 export default coversHexagons;

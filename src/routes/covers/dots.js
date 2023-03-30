@@ -8,7 +8,6 @@ const coversDots = [
   '/covers/dots/dots-7.svg',
   '/covers/dots/dots-8.svg',
   '/covers/dots/dots-9.svg',
-  '/covers/dots/dots-10.svg',
 ];
 
 export default coversDots;

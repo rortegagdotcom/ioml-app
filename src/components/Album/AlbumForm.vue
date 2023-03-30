@@ -3,7 +3,7 @@ import axios from 'axios';
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
-import IOMLTab from '../IOMLTab/IOMLTab.vue';
+import Covers from '../Covers/Covers.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -93,7 +93,7 @@ function handleCoverClicked(cover) {
         for="album-cover"
         >Select a Cover</label
       >
-      <IOMLTab
+      <Covers
         :activeTab="activeTab"
         :setActiveTab="setActiveTab"
         @cover-clicked="handleCoverClicked"

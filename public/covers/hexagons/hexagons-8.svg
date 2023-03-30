@@ -1,34 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+	 viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;}
-	.st1{fill:#A430F9;}
-	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#56207E;}
-	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);}
-	.st4{opacity:0.33;fill-rule:evenodd;clip-rule:evenodd;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#696C00;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#F3F3D6;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Nueva_muestra_de_motivo_47);}
 </style>
-<pattern  width="60" height="105" patternUnits="userSpaceOnUse" id="Nueva_muestra_de_motivo_41" viewBox="0 -105 60 105" style="overflow:visible;">
+<pattern  width="2.25" height="2" patternUnits="userSpaceOnUse" id="Nueva_muestra_de_motivo_47" viewBox="0 -2 2.25 2" style="overflow:visible;">
 	<g>
-		<rect y="-105" class="st0" width="60" height="105"/>
+		<rect y="-2" class="st0" width="2.25" height="2"/>
 		<g>
-			<rect y="-105" class="st0" width="60" height="105"/>
 			<g>
-				<g id="hexagons_00000060018556073095029270000007271806319510244255_">
-					<path class="st1" d="M2.14-35.89v-32.14L29.98-84.1l27.86,16.07v32.14L29.98-19.82L2.14-35.89z M29.98-24.77l23.57-13.59
-						v-27.19L29.98-79.16L6.43-65.57v27.21L29.98-24.77z M0-32.12v4.93L23.53-13.6V0h4.29v-16.07L0-32.14V-32.12z M0-71.81v-4.93
-						l23.53-13.59V-105h4.29v17.14L0-71.79V-71.81z M36.43,0v-13.61L59.98-27.2H60v-4.95h-0.02L32.14-16.07V0H36.43z M36.43-105
-						v14.68l23.55,13.59H60v4.95h-0.02L32.14-87.86V-105H36.43z"/>
-				</g>
+				<path class="st1" d="M1.9-1.16L2.16-2h0.09l-0.3,1l0.3,1H2.16L1.9-0.84L1.8-0.5H1.5L1.65,0H1.56l-0.1-0.34L1.35,0h-0.9
+					l-0.1-0.34L0.24,0H0.15L0.3-0.5L0-1.5L0.15-2h0.09L0.09-1.5l0.25,0.84L0.45-1h0.3l-0.3-1h0.09L0.8-1.16L0.9-1.5h0.81L1.56-2
+					h0.09L1.8-1.5L1.9-1.16z M1.74-0.6H1.53l0.22-0.74L1.86-1C1.86-1,1.74-0.6,1.74-0.6z M0.96-0.6L0.87-0.9h0.41l0.09,0.3
+					C1.38-0.6,0.96-0.6,0.96-0.6z M0.9-0.5h0.51L1.29-0.1H0.57L0.8-0.84L0.9-0.5z M0.96-1.4h0.71L1.45-0.66L1.35-1H0.84L0.96-1.4z
+					 M0.39-0.5l0.1,0.34L0.72-0.9H0.51L0.39-0.5z"/>
 			</g>
 		</g>
 	</g>
 </pattern>
-<g id="Patron">
-	<rect class="st2" width="250" height="250"/>
-	<pattern  id="SVGID_1_" xlink:href="#Nueva_muestra_de_motivo_41" patternTransform="matrix(1 0 0 -1 -109 -15833)">
-	</pattern>
-	<rect class="st3" width="250" height="250"/>
-</g>
-<rect class="st4" width="250" height="250"/>
+<rect class="st2" width="16" height="16"/>
+<rect class="st3" width="16" height="16"/>
 </svg>

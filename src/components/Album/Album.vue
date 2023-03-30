@@ -47,22 +47,12 @@ const props = defineProps({
 
 <style>
 /* Se importan estilos CSS de los covers, por que no pone el background-image con TailwindCSS en su configuración */
-@import './css/covers/bank-note.css';
-@import './css/covers/bricks.css';
-@import './css/covers/bubbles.css';
-@import './css/covers/circles.css';
-@import './css/covers/cross.css';
-@import './css/covers/diamonds.css';
-@import './css/covers/domino.css';
-@import './css/covers/dots.css';
-@import './css/covers/hexagons.css';
-@import './css/covers/jigsaw.css';
-@import './css/covers/jupiter.css';
-@import './css/covers/leafs.css';
-@import './css/covers/melt.css';
-@import './css/covers/squares.css';
-@import './css/covers/stripes.css';
-@import './css/covers/tic-tac-toe.css';
-@import './css/covers/triangles.css';
-@import './css/covers/yyy.css';
+@import '../Covers/css/covers/autumn.css';
+@import '../Covers/css/covers/bank-note.css';
+@import '../Covers/css/covers/cage.css';
+@import '../Covers/css/covers/curtain.css';
+@import '../Covers/css/covers/endless-clouds.css';
+@import '../Covers/css/covers/overlapping-hexagons.css';
+@import '../Covers/css/covers/points-stars.css';
+@import '../Covers/css/covers/polka-dots.css';
 </style>

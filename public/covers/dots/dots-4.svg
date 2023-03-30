@@ -1,35 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+	 viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;}
-	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#97F930;}
-	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#507E20;}
-	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);}
-	.st4{opacity:0.33;fill-rule:evenodd;clip-rule:evenodd;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#B17070;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:none;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#ECD6D6;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Nueva_muestra_de_motivo_54);}
 </style>
-<pattern  width="65.52" height="65.52" patternUnits="userSpaceOnUse" id="Nueva_muestra_de_motivo_6" viewBox="0 -65.53 65.52 65.52" style="overflow:visible;">
+<pattern  width="2" height="2" patternUnits="userSpaceOnUse" id="Nueva_muestra_de_motivo_54" viewBox="0 -2 2 2" style="overflow:visible;">
 	<g>
-		<rect y="-65.53" class="st0" width="65.52" height="65.52"/>
-		<g>
-			<rect y="-65.53" class="st0" width="65.52" height="65.52"/>
-			<g id="Page-1_00000114033882479102858460000000640210256087464101_">
-				<g id="dots_00000026873134234600427050000017906939306391631016_">
-					
-						<circle id="Oval-377-Copy-9_00000181082752159674104900000006201150209501845432_" class="st1" cx="9.38" cy="-9.38" r="9.38"/>
-					
-						<circle id="Oval-377-Copy-14_00000111910793774244553240000017091974399390779802_" class="st1" cx="40.62" cy="-40.63" r="9.38"/>
-				</g>
+		<rect y="-2" class="st0" width="2" height="2"/>
+		<g id="Page-1_00000057108590710297919250000007691264515883545776_">
+			<g id="dots_00000157276957467900066990000013891051491132716436_">
+				<circle id="Oval-377-Copy-9_00000016790066981534148850000013488359721555660988_" class="st1" cx="0.53" cy="-1.47" r="0.28"/>
+				
+					<circle id="Oval-377-Copy-14_00000147938331145516310450000006830465538428832130_" class="st1" cx="1.47" cy="-0.53" r="0.28"/>
 			</g>
-			<rect x="0.52" y="-65.53" class="st0" width="65" height="65"/>
 		</g>
+		<rect y="-2" class="st2" width="2" height="2"/>
 	</g>
 </pattern>
-<g id="Patron">
-	<rect class="st2" width="250" height="250"/>
-	<pattern  id="SVGID_1_" xlink:href="#Nueva_muestra_de_motivo_6" patternTransform="matrix(1 0 0 -1 -96.5201 -15611.2598)">
-	</pattern>
-	<rect class="st3" width="250" height="250"/>
-</g>
-<rect class="st4" width="250" height="250"/>
+<rect class="st3" width="16" height="16"/>
+<rect class="st4" width="16" height="16"/>
 </svg>
