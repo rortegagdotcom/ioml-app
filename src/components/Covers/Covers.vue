@@ -1,25 +1,14 @@
 <script setup>
 import { ref } from 'vue';
 
-import coversAutumn from '../../routes/covers/autumn';
 import coversBreeze from '../../routes/covers/breeze';
 import coversCage from '../../routes/covers/cage';
-import coversCurtain from '../../routes/covers/curtain';
 import coversClouds from '../../routes/covers/clouds';
 import coversHexagons from '../../routes/covers/hexagons';
 import coversStars from '../../routes/covers/stars';
 import coversDots from '../../routes/covers/dots';
 
-const tabs = ref([
-  'Autumn',
-  'Brezee',
-  'Cage',
-  'Curtain',
-  'Clouds',
-  'Hexagons',
-  'Stars',
-  'Dots',
-]);
+const tabs = ref(['Brezee', 'Cage', 'Clouds', 'Hexagons', 'Stars', 'Dots']);
 const activeTab = ref(0);
 
 function setActiveTab(index) {
@@ -42,9 +31,7 @@ function selectImage(index) {
 </script>
 
 <template>
-  <div
-    class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-5 font-medium text-gray-500"
-  >
+  <div class="grid grid-cols-3 md:grid-cols-6 gap-5 font-medium text-gray-500">
     <a
       href="#"
       class="flex border rounded-lg justify-center p-1 border-gray-500"
@@ -61,23 +48,6 @@ function selectImage(index) {
   </div>
   <div class="py-5">
     <div class="grid grid-cols-3 md:grid-cols-9 gap-2" v-if="activeTab === 0">
-      <div v-for="(cover, index) in coversAutumn" :key="index">
-        <img
-          class="w-32 cursor-pointer"
-          :src="cover"
-          @click="
-            handleCoverClick(cover);
-            selectImage(index);
-          "
-          :class="{
-            'border-8 border-solid border-pink-500 dark:border-orange-500':
-              selectedIndex == index,
-          }"
-        />
-      </div>
-    </div>
-
-    <div class="grid grid-cols-3 md:grid-cols-9 gap-2" v-if="activeTab === 1">
       <div v-for="(cover, index) in coversBreeze" :key="index">
         <img
           class="w-32 cursor-pointer"
@@ -94,7 +64,7 @@ function selectImage(index) {
       </div>
     </div>
 
-    <div class="grid grid-cols-3 md:grid-cols-9 gap-2" v-if="activeTab === 2">
+    <div class="grid grid-cols-3 md:grid-cols-9 gap-2" v-if="activeTab === 1">
       <div v-for="(cover, index) in coversCage" :key="index">
         <img
           class="w-32 cursor-pointer"
@@ -111,24 +81,7 @@ function selectImage(index) {
       </div>
     </div>
 
-    <div class="grid grid-cols-3 md:grid-cols-9 gap-2" v-if="activeTab === 3">
-      <div v-for="(cover, index) in coversCurtain" :key="index">
-        <img
-          class="w-32 cursor-pointer"
-          :src="cover"
-          @click="
-            handleCoverClick(cover);
-            selectImage(index);
-          "
-          :class="{
-            'border-8 border-solid border-pink-500 dark:border-orange-500':
-              selectedIndex == index,
-          }"
-        />
-      </div>
-    </div>
-
-    <div class="grid grid-cols-3 md:grid-cols-9 gap-2" v-if="activeTab === 4">
+    <div class="grid grid-cols-3 md:grid-cols-9 gap-2" v-if="activeTab === 2">
       <div v-for="(cover, index) in coversClouds" :key="index">
         <img
           class="w-32 cursor-pointer"
@@ -145,7 +98,7 @@ function selectImage(index) {
       </div>
     </div>
 
-    <div class="grid grid-cols-3 md:grid-cols-9 gap-2" v-if="activeTab === 5">
+    <div class="grid grid-cols-3 md:grid-cols-9 gap-2" v-if="activeTab === 3">
       <div v-for="(cover, index) in coversHexagons" :key="index">
         <img
           class="w-32 cursor-pointer"
@@ -162,7 +115,7 @@ function selectImage(index) {
       </div>
     </div>
 
-    <div class="grid grid-cols-3 md:grid-cols-9 gap-2" v-if="activeTab === 6">
+    <div class="grid grid-cols-3 md:grid-cols-9 gap-2" v-if="activeTab === 4">
       <div v-for="(cover, index) in coversStars" :key="index">
         <img
           class="w-32 cursor-pointer"
@@ -179,7 +132,7 @@ function selectImage(index) {
       </div>
     </div>
 
-    <div class="grid grid-cols-3 md:grid-cols-9 gap-2" v-if="activeTab === 7">
+    <div class="grid grid-cols-3 md:grid-cols-9 gap-2" v-if="activeTab === 5">
       <div v-for="(cover, index) in coversDots" :key="index">
         <img
           class="w-32 cursor-pointer"
