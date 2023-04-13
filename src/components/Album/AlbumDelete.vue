@@ -41,7 +41,10 @@ async function handleDeleteAlbum() {
 
 <template>
   <div class="text-black dark:text-white">
-    <h1 class="text-center text-xl pb-5">Are you sure to delete?</h1>
+    <h1 class="text-center text-xl pb-2">Are you sure to delete?</h1>
+    <h2 class="text-center text-xl pb-5">
+      All photos in this album will be deleted
+    </h2>
     <div class="flex justify-center pb-10">
       <div
         :class="`bg-${album.cover}`"

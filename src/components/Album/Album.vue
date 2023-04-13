@@ -47,10 +47,8 @@ const props = defineProps({
 
 <style>
 /* Se importan estilos CSS de los covers, por que no pone el background-image con TailwindCSS en su configuración */
-@import '../Covers/css/covers/autumn.css';
 @import '../Covers/css/covers/breeze.css';
 @import '../Covers/css/covers/cage.css';
-@import '../Covers/css/covers/curtain.css';
 @import '../Covers/css/covers/clouds.css';
 @import '../Covers/css/covers/hexagons.css';
 @import '../Covers/css/covers/stars.css';
