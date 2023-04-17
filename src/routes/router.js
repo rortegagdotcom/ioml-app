@@ -27,6 +27,26 @@ const routes = [
     component: () => import('../components/Album/AlbumDelete.vue'),
   },
   {
+    path: '/photos/new',
+    name: 'photos-new',
+    component: () => import('../components/Photo/PhotoForm.vue'),
+  },
+  {
+    path: '/photos/edit/:id',
+    name: 'photos-edit',
+    component: () => import('../components/Photo/PhotoForm.vue'),
+  },
+  {
+    path: '/photos/:id',
+    name: 'photos-details',
+    component: () => import('../components/Photo/PhotoDetail.vue'),
+  },
+  {
+    path: '/photos/delete/:id',
+    name: 'photos-delete',
+    component: () => import('../components/Photo/PhotoDelete.vue'),
+  },
+  {
     path: '/about',
     name: 'about',
     component: () => import('../components/About.vue'),
