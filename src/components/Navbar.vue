@@ -25,7 +25,7 @@ const linkTo = computed(() => {
       <router-link :to="linkTo">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="/add-dark.svg" />
-          <img class="h-12" src="/add-light.svg" alt="Add Album" />
+          <img class="h-12" src="/add-light.svg" alt="Add" />
         </picture>
       </router-link>
     </button>

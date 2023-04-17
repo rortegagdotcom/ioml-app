@@ -85,6 +85,7 @@ function handleCoverClicked(cover) {
           id="album-name"
           name="album-name"
           v-model="albumName"
+          maxlength="50"
           required
         />
       </div>
