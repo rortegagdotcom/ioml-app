@@ -7,11 +7,11 @@ const props = defineProps({
 <template>
   <div>
     <router-link :to="{ name: 'albums-details', params: { id: album.id } }">
-      <div class="block w-80 h-96 book">
-        <div class="book-back book-inner" :class="`bg-${album.cover}`"></div>
-        <div class="book-pages book-inner"></div>
-        <div class="book-pages book-inner"></div>
-        <div class="book-cover book-inner" :class="`bg-${album.cover}`">
+      <div class="album block w-80 h-96">
+        <div class="album-back album-inner" :class="`bg-${album.cover}`"></div>
+        <div class="album-pages album-inner"></div>
+        <div class="album-pages album-inner"></div>
+        <div class="album-cover album-inner" :class="`bg-${album.cover}`">
           <div class="bg-gray-100 dark:bg-gray-900 p-3">
             <h3 class="mb-2 text-2xl font-bold text-center break-words">
               {{ album.name }}
@@ -19,14 +19,6 @@ const props = defineProps({
           </div>
         </div>
       </div>
-      <!--
-      <div
-        :class="`bg-${album.cover}`"
-        class="block w-80 h-96 p-5 border-gray-200 rounded-lg shadow dark:border-gray-700 cursor-pointer"
-      >
-        
-      </div>
-    -->
     </router-link>
     <div class="flex flex-nowrap flex-row justify-around mt-2">
       <button class="bg-gray-200 p-2 rounded-full dark:bg-gray-700">
@@ -64,15 +56,12 @@ const props = defineProps({
 @import '../Covers/css/covers/stars.css';
 @import '../Covers/css/covers/dots.css';
 
-.book {
+.album {
   perspective: 87.5rem;
 }
-.book-back {
-  background-color: #fe3a3c;
-}
-.book-inner,
-.book-pages::before,
-.book-pages::after {
+.album-inner,
+.album-pages::before,
+.album-pages::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -81,16 +70,16 @@ const props = defineProps({
   transform-origin: left center;
   transition: transform 0.2s ease-in;
 }
-.book-cover,
-.book-pages {
+.album-cover,
+.album-pages {
   transform-style: preserve-3d;
 }
-.book-pages {
+.album-pages {
   transform: scale(0.95, 0.9);
   perspective: 2000px;
 }
-.book-pages::before,
-.book-pages::after {
+.album-pages::before,
+.album-pages::after {
   background-color: #fff;
   background-image: linear-gradient(
     to right,
@@ -101,7 +90,7 @@ const props = defineProps({
   box-shadow: 1px 4px 5px 0 rgba(0, 0, 0, 0.05);
   content: '';
 }
-.book-cover::before {
+.album-cover::before {
   content: '';
   position: absolute;
   top: 0;
@@ -109,65 +98,65 @@ const props = defineProps({
   right: 0;
   bottom: 0;
 }
-.book-back,
-.book-pages {
+.album-back,
+.album-pages {
   right: 0;
   bottom: 0;
 }
-.book-pages::after {
+.album-pages::after {
   transition-delay: 0.12s;
 }
-.book-pages::before {
+.album-pages::before {
   transition-delay: 0.105s;
 }
-.book-pages + .book-pages::after {
+.album-pages + .album-pages::after {
   transition-delay: 0.09s;
 }
-.book-pages + .book-pages::before {
+.album-pages + .album-pages::before {
   transition-delay: 0.075s;
 }
-.book-pages + .book-pages + .book-pages::after {
+.album-pages + .album-pages + .album-pages::after {
   transition-delay: 0.06s;
 }
-.book-pages + .book-pages + .book-pages::before {
+.album-pages + .album-pages + .album-pages::before {
   transition-delay: 0.045s;
 }
-.book-pages + .book-pages + .book-pages + .book-pages::after {
+.album-pages + .album-pages + .album-pages + .album-pages::after {
   transition-delay: 0.03s;
 }
-.book-pages + .book-pages + .book-pages + .book-pages::before {
+.album-pages + .album-pages + .album-pages + .album-pages::before {
   transition-delay: 0.015s;
 }
-.book:hover .book-back,
-.book:hover .book-cover::before {
+.album:hover .album-back,
+.album:hover .album-cover::before {
   box-shadow: inset -2px 0 1px rgba(0, 0, 0, 0.075);
 }
-.book:hover .book-cover {
+.album:hover .album-cover {
   transform: rotateY(-40deg);
   transition-delay: 0s;
 }
-.book:hover .book-pages::after {
+.album:hover .album-pages::after {
   transform: rotateY(-12deg);
 }
-.book:hover .book-pages::before {
+.album:hover .album-pages::before {
   transform: rotateY(-8deg);
 }
-.book:hover .book-pages + .book-pages::after {
+.album:hover .album-pages + .album-pages::after {
   transform: rotateY(-20deg);
 }
-.book:hover .book-pages + .book-pages::before {
+.album:hover .album-pages + .album-pages::before {
   transform: rotateY(-16deg);
 }
-.book:hover .book-pages + .book-pages + .book-pages::after {
+.album:hover .album-pages + .album-pages + .album-pages::after {
   transform: rotateY(-28deg);
 }
-.book:hover .book-pages + .book-pages + .book-pages::before {
+.album:hover .album-pages + .album-pages + .album-pages::before {
   transform: rotateY(-24deg);
 }
-.book:hover .book-pages + .book-pages + .book-pages + .book-pages::after {
+.album:hover .album-pages + .album-pages + .album-pages + .album-pages::after {
   transform: rotateY(-36deg);
 }
-.book:hover .book-pages + .book-pages + .book-pages + .book-pages::before {
+.album:hover .album-pages + .album-pages + .album-pages + .album-pages::before {
   transform: rotateY(-32deg);
 }
 </style>
