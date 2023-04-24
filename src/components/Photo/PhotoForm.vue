@@ -1,4 +1,15 @@
-<script setup></script>
+<script setup>
+import axios from 'axios';
+import { ref } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+
+const router = useRouter();
+const route = useRoute();
+
+const albumId = route.params.albumid;
+const photoName = ref('');
+const photoFile = ref('');
+</script>
 
 <template>
   <h1 class="text-center text-2xl font-bold text-black dark:text-white">
@@ -7,7 +18,7 @@
   <form
     class="flex justify-center items-center flex-col"
     id="add-photo"
-    action=""
+    @submit.prevent="addPhoto"
   >
     <div class="m-5">
       <div>

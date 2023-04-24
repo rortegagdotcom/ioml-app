@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from '@vue/reactivity';
+import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
 const linkTo = computed(() => {
@@ -12,7 +12,9 @@ const linkTo = computed(() => {
   ) {
     return '/albums/new';
   } else {
-    return '/photos/new';
+    const albumId = route.params.albumid;
+    console.log(albumId);
+    return `/albums/${albumId}/photos/new`;
   }
 });
 </script>

@@ -12,7 +12,7 @@ const albumName = ref('');
 const coverName = ref('');
 const activeTab = ref(1);
 
-const albumId = route.params.id;
+const albumId = route.params.albumid;
 
 async function createOrEditAlbum() {
   if (albumId) {

@@ -23,7 +23,7 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <h1>Bien</h1>
+  <h1>{{ albums }}</h1>
 </template>
 
 <style></style>

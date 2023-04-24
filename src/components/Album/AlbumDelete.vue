@@ -6,7 +6,7 @@ import { useRouter, useRoute } from 'vue-router';
 const router = useRouter();
 const route = useRoute();
 const albums = ref(null);
-const albumId = route.params.id;
+const albumId = route.params.albumid;
 
 watchEffect(async () => {
   if (albumId) {

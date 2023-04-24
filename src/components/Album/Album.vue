@@ -6,7 +6,9 @@ const props = defineProps({
 
 <template>
   <div>
-    <router-link :to="{ name: 'albums-details', params: { id: album.id } }">
+    <router-link
+      :to="{ name: 'albums-details', params: { albumid: album.id } }"
+    >
       <div class="album block w-80 h-96">
         <div class="album-back album-inner" :class="`bg-${album.cover}`"></div>
         <div class="album-pages album-inner"></div>
@@ -22,7 +24,9 @@ const props = defineProps({
     </router-link>
     <div class="flex flex-nowrap flex-row justify-around mt-2">
       <button class="bg-gray-200 p-2 rounded-full dark:bg-gray-700">
-        <router-link :to="{ name: 'albums-edit', params: { id: album.id } }">
+        <router-link
+          :to="{ name: 'albums-edit', params: { albumid: album.id } }"
+        >
           <picture>
             <source
               media="(prefers-color-scheme: dark)"
@@ -33,7 +37,9 @@ const props = defineProps({
         </router-link>
       </button>
       <button class="bg-gray-200 p-2 rounded-full dark:bg-gray-700">
-        <router-link :to="{ name: 'albums-delete', params: { id: album.id } }">
+        <router-link
+          :to="{ name: 'albums-delete', params: { albumid: album.id } }"
+        >
           <picture>
             <source
               media="(prefers-color-scheme: dark)"
