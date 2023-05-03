@@ -13,7 +13,6 @@ const linkTo = computed(() => {
     return '/albums/new';
   } else {
     const albumId = route.params.albumid;
-    console.log(albumId);
     return `/albums/${albumId}/photos/new`;
   }
 });

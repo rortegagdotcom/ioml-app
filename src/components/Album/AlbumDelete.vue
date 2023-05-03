@@ -10,7 +10,7 @@ const albumId = route.params.albumid;
 
 watchEffect(async () => {
   if (albumId) {
-    await await axios
+    await axios
       .get(`http://localhost:5748/api/albums/${albumId}`)
       .then((res) => {
         albums.value = res.data[0];

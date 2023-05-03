@@ -6,11 +6,11 @@ import axios from 'axios';
 const router = useRouter();
 const route = useRoute();
 const albums = ref(null);
-const albumId = route.params.id;
+const albumId = route.params.albumid;
 
 watchEffect(async () => {
   if (albumId) {
-    await await axios
+    await axios
       .get(`http://localhost:5748/api/albums/${albumId}`)
       .then((res) => {
         albums.value = res.data[0];
@@ -22,8 +22,6 @@ watchEffect(async () => {
 });
 </script>
 
-<template>
-  <h1>{{ albums }}</h1>
-</template>
+<template></template>
 
 <style></style>

@@ -6,7 +6,7 @@ import Album from './Album.vue';
 const albums = ref(null);
 
 watchEffect(async () => {
-  await await axios
+  await axios
     .get('http://localhost:5748/api/albums')
     .then((res) => {
       albums.value = res.data[0];

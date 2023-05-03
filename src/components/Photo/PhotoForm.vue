@@ -1,14 +1,33 @@
 <script setup>
 import axios from 'axios';
 import { ref } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { useRoute } from 'vue-router';
 
-const router = useRouter();
 const route = useRoute();
 
 const albumId = route.params.albumid;
+const photoId = route.params.photoId;
 const photoName = ref('');
 const photoFile = ref('');
+
+async function createOrEditPhoto() {
+  if (photoId) {
+  } else {
+    await axios
+      .post('http://localhost:5748/api/photos', {
+        albumId: albumId,
+        name: photoName.value,
+        filename: photoFile.value,
+      })
+      .then((response) => console.log(response.data))
+      .catch((error) => {
+        console.error('Error when sending data:', error);
+      });
+  }
+
+  photoName.value = '';
+  photoFile.value = '';
+}
 </script>
 
 <template>
@@ -18,7 +37,8 @@ const photoFile = ref('');
   <form
     class="flex justify-center items-center flex-col"
     id="add-photo"
-    @submit.prevent="addPhoto"
+    enctype="multipart/form-data"
+    @submit.prevent="createOrEditPhoto"
   >
     <div class="m-5">
       <div>
@@ -50,8 +70,10 @@ const photoFile = ref('');
       <input
         class="block w-full p-5 text-black border border-gray-300 rounded-lg bg-gray-50 sm:text-md dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white file:mr-5 file:p-3 file:rounded-full file:border-0 file:font-semibold file:text-pink-500 dark:file:text-orange-500"
         type="file"
-        name="photo-filename"
-        id="photo-filename"
+        name="filename"
+        id="filename"
+        v-memo="photoFile"
+        accept="image/*"
       />
       <div class="flex justify-center items-center pt-5">
         <button
