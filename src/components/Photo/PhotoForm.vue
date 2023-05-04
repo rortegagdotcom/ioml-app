@@ -8,16 +8,22 @@ const route = useRoute();
 const albumId = route.params.albumid;
 const photoId = route.params.photoId;
 const photoName = ref('');
-const photoFile = ref('');
+const photoFile = ref(null);
 
 async function createOrEditPhoto() {
   if (photoId) {
   } else {
+    const formData = new FormData();
+
+    formData.append('albumId', albumId);
+    formData.append('name', photoName.value);
+    formData.append('photo', photoFile.value.files[0]);
+
     await axios
-      .post('http://localhost:5748/api/photos', {
-        albumId: albumId,
-        name: photoName.value,
-        filename: photoFile.value,
+      .post('http://localhost:5748/api/photos', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
       })
       .then((response) => console.log(response.data))
       .catch((error) => {
@@ -26,7 +32,7 @@ async function createOrEditPhoto() {
   }
 
   photoName.value = '';
-  photoFile.value = '';
+  photoFile.value = null;
 }
 </script>
 
@@ -70,9 +76,9 @@ async function createOrEditPhoto() {
       <input
         class="block w-full p-5 text-black border border-gray-300 rounded-lg bg-gray-50 sm:text-md dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white file:mr-5 file:p-3 file:rounded-full file:border-0 file:font-semibold file:text-pink-500 dark:file:text-orange-500"
         type="file"
-        name="filename"
-        id="filename"
-        v-memo="photoFile"
+        name="photo"
+        id="photo"
+        ref="photoFile"
         accept="image/*"
       />
       <div class="flex justify-center items-center pt-5">

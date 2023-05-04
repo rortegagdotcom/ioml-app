@@ -22,6 +22,8 @@ watchEffect(async () => {
 });
 </script>
 
-<template></template>
+<template>
+  <img src="http://localhost:5748/public/photos/1683224229169-ioml.jpg" />
+</template>
 
 <style></style>
