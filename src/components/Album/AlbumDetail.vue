@@ -1,11 +1,12 @@
 <script setup>
 import { ref, watchEffect } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
+import { useRoute } from 'vue-router';
 import axios from 'axios';
+import Photo from '../Photo/Photo.vue';
 
-const router = useRouter();
 const route = useRoute();
 const albums = ref(null);
+const photos = ref(null);
 const albumId = route.params.albumid;
 
 watchEffect(async () => {
@@ -20,10 +21,31 @@ watchEffect(async () => {
       });
   }
 });
+
+watchEffect(async () => {
+  if (albums) {
+    await axios
+      .get(`http://localhost:5748/api/albums/${albumId}/photos`)
+      .then((res) => {
+        photos.value = res.data[0];
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+});
 </script>
 
 <template>
-  <img src="http://localhost:5748/public/photos/1683224229169-ioml.jpg" />
+  <h1
+    class="text-center text-2xl font-bold text-gray-900 m-5 dark:text-gray-100"
+    v-if="albums"
+  >
+    {{ albums[0].name }}
+  </h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <Photo v-for="photo in photos" :photo="photo" :key="photo.id" />
+  </div>
 </template>
 
 <style></style>

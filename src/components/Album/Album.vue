@@ -15,7 +15,9 @@ const props = defineProps({
         <div class="album-pages album-inner"></div>
         <div class="album-cover album-inner" :class="`bg-${album.cover}`">
           <div class="bg-gray-100 dark:bg-gray-900 p-3">
-            <h3 class="mb-2 text-2xl font-bold text-center break-words">
+            <h3
+              class="mb-2 text-2xl font-bold text-center text-gray-900 break-words dark:text-gray-100"
+            >
               {{ album.name }}
             </h3>
           </div>

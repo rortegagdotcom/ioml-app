@@ -18,7 +18,7 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <div class="flex flex-wrap justify-center gap-5 text-black dark:text-white">
+  <div class="flex flex-wrap justify-center gap-5">
     <Album v-for="album in albums" :album="album" :key="album.id" />
   </div>
 </template>

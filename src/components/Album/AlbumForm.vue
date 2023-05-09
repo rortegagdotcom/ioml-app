@@ -64,7 +64,7 @@ function handleCoverClicked(cover) {
 </script>
 
 <template>
-  <h1 class="text-center text-2xl font-bold text-black dark:text-white">
+  <h1 class="text-center text-2xl font-bold text-gray-900 dark:text-gray-100">
     {{ albumId ? 'Update Album' : 'Create Album' }}
   </h1>
   <form
