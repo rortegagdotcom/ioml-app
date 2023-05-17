@@ -32,7 +32,7 @@ async function createOrEditPhoto() {
   }
 
   photoName.value = '';
-  photoFile.value = null;
+  photoFile.value.value = null;
 }
 </script>
 
@@ -43,7 +43,6 @@ async function createOrEditPhoto() {
   <form
     class="flex justify-center items-center flex-col"
     id="add-photo"
-    enctype="multipart/form-data"
     @submit.prevent="createOrEditPhoto"
   >
     <div class="m-5">
