@@ -3,6 +3,7 @@ import { ref } from 'vue';
 
 const props = defineProps({
   photo: Object,
+  albumId: String,
 });
 
 const showOverlay = ref(false);
@@ -42,13 +43,20 @@ const toggleOverlay = () => {
         </picture>
       </button>
       <button class="bg-gray-200 p-2 rounded-full dark:bg-gray-700">
-        <picture>
-          <source
-            media="(prefers-color-scheme: dark)"
-            srcset="/delete-dark.svg"
-          />
-          <img class="h-8" src="/delete-light.svg" alt="Delete Photo" />
-        </picture>
+        <router-link
+          :to="{
+            name: 'photos-delete',
+            params: { albumid: albumId, photoid: photo.id },
+          }"
+        >
+          <picture>
+            <source
+              media="(prefers-color-scheme: dark)"
+              srcset="/delete-dark.svg"
+            />
+            <img class="h-8" src="/delete-light.svg" alt="Delete Photo" />
+          </picture>
+        </router-link>
       </button>
     </div>
   </div>

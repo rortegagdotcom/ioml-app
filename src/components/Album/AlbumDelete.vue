@@ -22,7 +22,7 @@ watchEffect(async () => {
 });
 
 function goBack() {
-  router.push('/');
+  router.go(-1);
 }
 
 async function handleDeleteAlbum() {
@@ -35,7 +35,7 @@ async function handleDeleteAlbum() {
       console.log('Error when deleting album', error);
     });
 
-  router.push('/');
+  router.go(-1);
 }
 </script>
 
@@ -47,15 +47,13 @@ async function handleDeleteAlbum() {
     </h2>
     <div class="flex justify-center pb-10">
       <div
-        :class="`bg-${album.cover}`"
+        :class="`bg-${albums[0].cover}`"
         class="block w-80 h-96 p-5 border-gray-200 rounded-lg shadow dark:border-gray-700"
-        v-for="album in albums"
-        :album="album"
-        :key="album.id"
+        v-if="albums"
       >
         <div class="bg-gray-100 dark:bg-gray-900 p-5 rounded-xl">
           <h3 class="mb-2 text-2xl font-bold text-center">
-            {{ album.name }}
+            {{ albums[0].name }}
           </h3>
         </div>
       </div>
