@@ -27,7 +27,7 @@ watchEffect(async () => {
     await axios
       .get(`http://localhost:5748/api/albums/${albumId}/photos`)
       .then((res) => {
-        photos.value = res.data;
+        photos.value = res.data[0];
       })
       .catch((error) => {
         console.error(error);
@@ -48,9 +48,9 @@ watchEffect(async () => {
   >
     <Photo
       v-for="photo in photos"
+      :albumId="`${albums[0].id}`"
       :photo="photo"
       :key="photo.id"
-      :album-id="albumId"
     />
   </div>
 </template>

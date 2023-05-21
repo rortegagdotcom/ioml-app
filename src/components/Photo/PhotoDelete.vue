@@ -7,7 +7,7 @@ const router = useRouter();
 const route = useRoute();
 const photos = ref(null);
 const albumId = route.params.albumid;
-const photoId = route.params.photoId;
+const photoId = route.params.photoid;
 
 watchEffect(async () => {
   if (albumId && photoId) {
@@ -41,17 +41,21 @@ async function handleDeletePhoto() {
 </script>
 
 <template>
-  <div class="text-black dark:text-white">
+  <div class="text-gray-900 dark:text-gray-200">
     <h1 class="text-center text-xl pb-2">Are you sure to delete?</h1>
-    <div class="flex justify-center pb-10" v-if="photos">
+    <div className="flex relative justify-center" v-if="photos">
       <img
-        class="w-full h-full object-cover rounded-xl"
-        @click="toggleOverlay"
+        class="pt-5 w-full 2xl:w-1/2"
         :src="`${photos[0].filename}`"
+        :alt="`${photos[0].name}`"
       />
-      <p class="text-center">{{ photos[0].name }}</p>
+      <div
+        className="absolute bottom-0 w-full 2xl:w-1/2 p-2 bg-opacity-50 bg-black text-gray-200 text-center"
+      >
+        {{ photos[0].name }}
+      </div>
     </div>
-    <div class="flex flex-wrap flex-row justify-evenly">
+    <div class="flex flex-wrap flex-row justify-evenly pt-10">
       <button
         class="text-white bg-gradient-to-br from-red-500 to-red-900 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 font-medium rounded-lg p-5 text-center mr-2 mb-2"
         @click.prevent="goBack()"
