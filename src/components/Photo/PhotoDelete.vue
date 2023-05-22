@@ -42,15 +42,15 @@ async function handleDeletePhoto() {
 
 <template>
   <div class="text-gray-900 dark:text-gray-200">
-    <h1 class="text-center text-xl pb-2">Are you sure to delete?</h1>
+    <h1 class="text-center text-xl pb-5">Are you sure to delete?</h1>
     <div className="flex relative justify-center" v-if="photos">
       <img
-        class="pt-5 w-full 2xl:w-1/2"
+        class="rounded-xl w-full 2xl:w-1/2"
         :src="`${photos[0].filename}`"
         :alt="`${photos[0].name}`"
       />
       <div
-        className="absolute bottom-0 w-full 2xl:w-1/2 p-2 bg-opacity-50 bg-black text-gray-200 text-center"
+        className="absolute bottom-0 w-full 2xl:w-1/2 p-2 bg-black bg-opacity-50 rounded-br-xl rounded-bl-xl text-gray-200 text-center"
       >
         {{ photos[0].name }}
       </div>

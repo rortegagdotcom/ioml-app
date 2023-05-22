@@ -25,22 +25,36 @@ const toggleOverlay = () => {
       v-if="showOverlay"
     >
       <button class="bg-gray-200 p-2 rounded-full dark:bg-gray-700">
-        <picture>
-          <source
-            media="(prefers-color-scheme: dark)"
-            srcset="/view-dark.svg"
-          />
-          <img class="h-8" src="/view-light.svg" alt="View Photo" />
-        </picture>
+        <router-link
+          :to="{
+            name: 'photos-details',
+            params: { albumid: albumId, photoid: photo.id },
+          }"
+        >
+          <picture>
+            <source
+              media="(prefers-color-scheme: dark)"
+              srcset="/view-dark.svg"
+            />
+            <img class="h-8" src="/view-light.svg" alt="View Photo" />
+          </picture>
+        </router-link>
       </button>
       <button class="bg-gray-200 p-2 rounded-full dark:bg-gray-700">
-        <picture>
-          <source
-            media="(prefers-color-scheme: dark)"
-            srcset="/edit-dark.svg"
-          />
-          <img class="h-8" src="/edit-light.svg" alt="Edit Photo" />
-        </picture>
+        <router-link
+          :to="{
+            name: 'photos-edit',
+            params: { albumid: albumId, photoid: photo.id },
+          }"
+        >
+          <picture>
+            <source
+              media="(prefers-color-scheme: dark)"
+              srcset="/edit-dark.svg"
+            />
+            <img class="h-8" src="/edit-light.svg" alt="Edit Photo" />
+          </picture>
+        </router-link>
       </button>
       <button class="bg-gray-200 p-2 rounded-full dark:bg-gray-700">
         <router-link

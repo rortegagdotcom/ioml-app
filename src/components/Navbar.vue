@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
-const linkTo = computed(() => {
+const addAlbumPhoto = computed(() => {
   const route = useRoute();
   if (
     route.name === 'albums' ||
@@ -23,7 +23,7 @@ const linkTo = computed(() => {
     class="flex items-center justify-between p-3 bg-gray-100 dark:bg-gray-900"
   >
     <button class="bg-gray-200 p-2 rounded-full dark:bg-gray-700">
-      <router-link :to="linkTo">
+      <router-link :to="addAlbumPhoto">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="/add-dark.svg" />
           <img class="h-12" src="/add-light.svg" alt="Add" />
