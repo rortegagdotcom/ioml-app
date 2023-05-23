@@ -1,17 +1,36 @@
 <script setup>
 import axios from 'axios';
 import { ref } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 
 const route = useRoute();
+const router = useRouter();
 
 const albumId = route.params.albumid;
-const photoId = route.params.photoId;
+const photoId = route.params.photoid;
 const photoName = ref('');
 const photoFile = ref(null);
 
 async function createOrEditPhoto() {
   if (photoId) {
+    const formData = new FormData();
+
+    formData.append('photo', photoFile.value.files[0]);
+    formData.append('name', photoName.value);
+    formData.append('photoId', photoId);
+
+    await axios
+      .put(`http://localhost:5748/api/photos/${photoId}`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      })
+      .then((response) => console.log(response.data))
+      .catch((error) => {
+        console.error('Error when sending data:', error);
+      });
+
+    router.go(-1);
   } else {
     const formData = new FormData();
 
@@ -38,11 +57,11 @@ async function createOrEditPhoto() {
 
 <template>
   <h1 class="text-center text-2xl font-bold text-black dark:text-white">
-    Add Photos
+    {{ photoId ? 'Edit Photo' : 'Add Photos' }}
   </h1>
   <form
     class="flex justify-center items-center flex-col"
-    id="add-photo"
+    id="add-or-edit-photo"
     @submit.prevent="createOrEditPhoto"
   >
     <div class="m-5">
@@ -63,11 +82,8 @@ async function createOrEditPhoto() {
           required
         />
       </div>
-      <p class="mb-5 text-gray-900 dark:text-gray-200">
-        You can add more photos with that name
-      </p>
       <label
-        class="inline-block text-lg font-bold text-black dark:text-white mb-2"
+        class="inline-block text-lg font-bold text-black dark:text-white mt-5 mb-2"
         for="photo-file"
       >
         Select your photo
