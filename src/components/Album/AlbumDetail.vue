@@ -43,8 +43,15 @@ watchEffect(async () => {
   >
     {{ albums[0].name }}
   </h1>
+  <h2
+    class="text-center text-2xl font-bold text-gray-900 m-5 dark:text-gray-100"
+    v-if="photos < 1"
+  >
+    There are no photos available
+  </h2>
   <div
     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
+    v-else
   >
     <Photo
       v-for="photo in photos"

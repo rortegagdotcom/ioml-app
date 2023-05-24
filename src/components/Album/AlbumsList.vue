@@ -18,7 +18,13 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <div class="flex flex-wrap justify-center gap-5">
+  <h1
+    class="text-center text-2xl font-bold text-black dark:text-white"
+    v-if="albums < 1"
+  >
+    There are no albums available
+  </h1>
+  <div class="flex flex-wrap justify-center gap-5" v-else>
     <Album v-for="album in albums" :album="album" :key="album.id" />
   </div>
 </template>
