@@ -20,7 +20,7 @@ async function createOrEditPhoto() {
     formData.append('photoId', photoId);
 
     await axios
-      .put(`http://localhost:5748/api/photos/${photoId}`, formData, {
+      .put(`http://192.168.100.82:5748/api/photos/${photoId}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -39,7 +39,7 @@ async function createOrEditPhoto() {
     formData.append('photo', photoFile.value.files[0]);
 
     await axios
-      .post('http://localhost:5748/api/photos', formData, {
+      .post('http://192.168.100.82:5748/api/photos', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

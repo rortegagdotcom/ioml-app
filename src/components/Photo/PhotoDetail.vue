@@ -12,7 +12,7 @@ const photoId = route.params.photoid;
 watchEffect(async () => {
   if (albumId && photoId) {
     await axios
-      .get(`http://localhost:5748/api/albums/${albumId}/photo/${photoId}`)
+      .get(`http://192.168.100.82:5748/api/albums/${albumId}/photo/${photoId}`)
       .then((res) => {
         photos.value = res.data[0];
       })

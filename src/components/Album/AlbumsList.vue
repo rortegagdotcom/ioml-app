@@ -7,7 +7,7 @@ const albums = ref(null);
 
 watchEffect(async () => {
   await axios
-    .get('http://localhost:5748/api/albums')
+    .get('http://192.168.100.82:5748/api/albums')
     .then((res) => {
       albums.value = res.data[0];
     })

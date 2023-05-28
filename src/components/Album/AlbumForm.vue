@@ -17,7 +17,7 @@ const albumId = route.params.albumid;
 async function createOrEditAlbum() {
   if (albumId) {
     await axios.put(
-      `http://localhost:5748/api/albums/${albumId}`,
+      `http://192.168.100.82:5748/api/albums/${albumId}`,
       {
         name: albumName.value,
         cover: coverName.value,
@@ -31,7 +31,7 @@ async function createOrEditAlbum() {
   } else {
     await axios
       .post(
-        'http://localhost:5748/api/albums',
+        'http://192.168.100.82:5748/api/albums',
         {
           name: albumName.value,
           cover: coverName.value,
