@@ -91,8 +91,8 @@ async function createOrEditPhoto() {
       <input
         class="block w-full p-5 text-black border border-gray-300 rounded-lg bg-gray-50 sm:text-md dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white file:mr-5 file:p-3 file:rounded-full file:border-0 file:font-semibold file:text-pink-500 dark:file:text-orange-500"
         type="file"
-        name="photo"
-        id="photo"
+        name="photo-file"
+        id="photo-file"
         ref="photoFile"
         accept="image/*"
       />

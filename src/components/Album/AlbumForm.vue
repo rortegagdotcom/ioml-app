@@ -91,7 +91,6 @@ function handleCoverClicked(cover) {
       </div>
       <label
         class="inline-block text-lg mt-5 mb-2 font-bold text-black dark:text-white"
-        for="album-cover"
         >Select a Cover</label
       >
       <Covers
