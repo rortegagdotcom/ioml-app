@@ -1,0 +1,28 @@
+const coversLeave = [
+  '/covers/leave/leave-1.svg',
+  '/covers/leave/leave-2.svg',
+  '/covers/leave/leave-3.svg',
+  '/covers/leave/leave-4.svg',
+  '/covers/leave/leave-5.svg',
+  '/covers/leave/leave-6.svg',
+  '/covers/leave/leave-7.svg',
+  '/covers/leave/leave-8.svg',
+  '/covers/leave/leave-9.svg',
+  '/covers/leave/leave-10.svg',
+  '/covers/leave/leave-11.svg',
+  '/covers/leave/leave-12.svg',
+  '/covers/leave/leave-13.svg',
+  '/covers/leave/leave-14.svg',
+  '/covers/leave/leave-15.svg',
+  '/covers/leave/leave-16.svg',
+  '/covers/leave/leave-17.svg',
+  '/covers/leave/leave-18.svg',
+  '/covers/leave/leave-19.svg',
+  '/covers/leave/leave-20.svg',
+  '/covers/leave/leave-21.svg',
+  '/covers/leave/leave-22.svg',
+  '/covers/leave/leave-23.svg',
+  '/covers/leave/leave-24.svg',
+];
+
+export default coversLeave;

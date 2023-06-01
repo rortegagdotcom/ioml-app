@@ -57,12 +57,14 @@ const props = defineProps({
 
 <style>
 /* Se importan estilos CSS de los covers, por que no pone el background-image con TailwindCSS en su configuración */
-@import '../Covers/css/covers/breeze.css';
+@import '../Covers/css/covers/wave.css';
 @import '../Covers/css/covers/cage.css';
-@import '../Covers/css/covers/clouds.css';
-@import '../Covers/css/covers/hexagons.css';
-@import '../Covers/css/covers/stars.css';
-@import '../Covers/css/covers/dots.css';
+@import '../Covers/css/covers/cloud.css';
+@import '../Covers/css/covers/hexagon.css';
+@import '../Covers/css/covers/star.css';
+@import '../Covers/css/covers/circle.css';
+@import '../Covers/css/covers/flower.css';
+@import '../Covers/css/covers/leave.css';
 
 .album {
   perspective: 87.5rem;

@@ -1,0 +1,28 @@
+const coversHexagon = [
+  '/covers/hexagon/hexagon-1.svg',
+  '/covers/hexagon/hexagon-2.svg',
+  '/covers/hexagon/hexagon-3.svg',
+  '/covers/hexagon/hexagon-4.svg',
+  '/covers/hexagon/hexagon-5.svg',
+  '/covers/hexagon/hexagon-6.svg',
+  '/covers/hexagon/hexagon-7.svg',
+  '/covers/hexagon/hexagon-8.svg',
+  '/covers/hexagon/hexagon-9.svg',
+  '/covers/hexagon/hexagon-10.svg',
+  '/covers/hexagon/hexagon-11.svg',
+  '/covers/hexagon/hexagon-12.svg',
+  '/covers/hexagon/hexagon-13.svg',
+  '/covers/hexagon/hexagon-14.svg',
+  '/covers/hexagon/hexagon-15.svg',
+  '/covers/hexagon/hexagon-16.svg',
+  '/covers/hexagon/hexagon-17.svg',
+  '/covers/hexagon/hexagon-18.svg',
+  '/covers/hexagon/hexagon-19.svg',
+  '/covers/hexagon/hexagon-20.svg',
+  '/covers/hexagon/hexagon-21.svg',
+  '/covers/hexagon/hexagon-22.svg',
+  '/covers/hexagon/hexagon-23.svg',
+  '/covers/hexagon/hexagon-24.svg',
+];
+
+export default coversHexagon;

@@ -1,0 +1,28 @@
+const coversWave = [
+  '/covers/wave/wave-1.svg',
+  '/covers/wave/wave-2.svg',
+  '/covers/wave/wave-3.svg',
+  '/covers/wave/wave-4.svg',
+  '/covers/wave/wave-5.svg',
+  '/covers/wave/wave-6.svg',
+  '/covers/wave/wave-7.svg',
+  '/covers/wave/wave-8.svg',
+  '/covers/wave/wave-9.svg',
+  '/covers/wave/wave-10.svg',
+  '/covers/wave/wave-11.svg',
+  '/covers/wave/wave-12.svg',
+  '/covers/wave/wave-13.svg',
+  '/covers/wave/wave-14.svg',
+  '/covers/wave/wave-15.svg',
+  '/covers/wave/wave-16.svg',
+  '/covers/wave/wave-17.svg',
+  '/covers/wave/wave-18.svg',
+  '/covers/wave/wave-19.svg',
+  '/covers/wave/wave-20.svg',
+  '/covers/wave/wave-21.svg',
+  '/covers/wave/wave-22.svg',
+  '/covers/wave/wave-23.svg',
+  '/covers/wave/wave-24.svg',
+];
+
+export default coversWave;

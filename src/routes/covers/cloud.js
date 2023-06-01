@@ -1,0 +1,28 @@
+const coversCloud = [
+  '/covers/cloud/cloud-1.svg',
+  '/covers/cloud/cloud-2.svg',
+  '/covers/cloud/cloud-3.svg',
+  '/covers/cloud/cloud-4.svg',
+  '/covers/cloud/cloud-5.svg',
+  '/covers/cloud/cloud-6.svg',
+  '/covers/cloud/cloud-7.svg',
+  '/covers/cloud/cloud-8.svg',
+  '/covers/cloud/cloud-9.svg',
+  '/covers/cloud/cloud-10.svg',
+  '/covers/cloud/cloud-11.svg',
+  '/covers/cloud/cloud-12.svg',
+  '/covers/cloud/cloud-13.svg',
+  '/covers/cloud/cloud-14.svg',
+  '/covers/cloud/cloud-15.svg',
+  '/covers/cloud/cloud-16.svg',
+  '/covers/cloud/cloud-17.svg',
+  '/covers/cloud/cloud-18.svg',
+  '/covers/cloud/cloud-19.svg',
+  '/covers/cloud/cloud-20.svg',
+  '/covers/cloud/cloud-21.svg',
+  '/covers/cloud/cloud-22.svg',
+  '/covers/cloud/cloud-23.svg',
+  '/covers/cloud/cloud-24.svg',
+];
+
+export default coversCloud;

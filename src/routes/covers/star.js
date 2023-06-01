@@ -1,0 +1,28 @@
+const coversStar = [
+  '/covers/star/star-1.svg',
+  '/covers/star/star-2.svg',
+  '/covers/star/star-3.svg',
+  '/covers/star/star-4.svg',
+  '/covers/star/star-5.svg',
+  '/covers/star/star-6.svg',
+  '/covers/star/star-7.svg',
+  '/covers/star/star-8.svg',
+  '/covers/star/star-9.svg',
+  '/covers/star/star-10.svg',
+  '/covers/star/star-11.svg',
+  '/covers/star/star-12.svg',
+  '/covers/star/star-13.svg',
+  '/covers/star/star-14.svg',
+  '/covers/star/star-15.svg',
+  '/covers/star/star-16.svg',
+  '/covers/star/star-17.svg',
+  '/covers/star/star-18.svg',
+  '/covers/star/star-19.svg',
+  '/covers/star/star-20.svg',
+  '/covers/star/star-21.svg',
+  '/covers/star/star-22.svg',
+  '/covers/star/star-23.svg',
+  '/covers/star/star-24.svg',
+];
+
+export default coversStar;

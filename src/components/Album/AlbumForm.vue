@@ -9,7 +9,7 @@ const router = useRouter();
 const route = useRoute();
 
 const albumName = ref('');
-const coverName = ref('');
+const coverName = ref('wave-1');
 const activeTab = ref(1);
 
 const albumId = route.params.albumid;

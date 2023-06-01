@@ -8,6 +8,21 @@ const coversCage = [
   '/covers/cage/cage-7.svg',
   '/covers/cage/cage-8.svg',
   '/covers/cage/cage-9.svg',
+  '/covers/cage/cage-10.svg',
+  '/covers/cage/cage-11.svg',
+  '/covers/cage/cage-12.svg',
+  '/covers/cage/cage-13.svg',
+  '/covers/cage/cage-14.svg',
+  '/covers/cage/cage-15.svg',
+  '/covers/cage/cage-16.svg',
+  '/covers/cage/cage-17.svg',
+  '/covers/cage/cage-18.svg',
+  '/covers/cage/cage-19.svg',
+  '/covers/cage/cage-20.svg',
+  '/covers/cage/cage-21.svg',
+  '/covers/cage/cage-22.svg',
+  '/covers/cage/cage-23.svg',
+  '/covers/cage/cage-24.svg',
 ];
 
 export default coversCage;

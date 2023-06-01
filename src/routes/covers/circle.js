@@ -1,0 +1,28 @@
+const coversCircle = [
+  '/covers/circle/circle-1.svg',
+  '/covers/circle/circle-2.svg',
+  '/covers/circle/circle-3.svg',
+  '/covers/circle/circle-4.svg',
+  '/covers/circle/circle-5.svg',
+  '/covers/circle/circle-6.svg',
+  '/covers/circle/circle-7.svg',
+  '/covers/circle/circle-8.svg',
+  '/covers/circle/circle-9.svg',
+  '/covers/circle/circle-10.svg',
+  '/covers/circle/circle-11.svg',
+  '/covers/circle/circle-12.svg',
+  '/covers/circle/circle-13.svg',
+  '/covers/circle/circle-14.svg',
+  '/covers/circle/circle-15.svg',
+  '/covers/circle/circle-16.svg',
+  '/covers/circle/circle-17.svg',
+  '/covers/circle/circle-18.svg',
+  '/covers/circle/circle-19.svg',
+  '/covers/circle/circle-20.svg',
+  '/covers/circle/circle-21.svg',
+  '/covers/circle/circle-22.svg',
+  '/covers/circle/circle-23.svg',
+  '/covers/circle/circle-24.svg',
+];
+
+export default coversCircle;
