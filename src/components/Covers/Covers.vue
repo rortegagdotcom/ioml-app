@@ -58,10 +58,7 @@ function selectImage(index) {
     </a>
   </div>
   <div class="py-5">
-    <div
-      class="grid grid-cols-4 grid-rows-3 md:grid-cols-8 md:grid-rows-6 gap-2"
-      v-if="activeTab === 0"
-    >
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-2" v-if="activeTab === 0">
       <div v-for="(cover, index) in coversWave" :key="index">
         <img
           class="w-32 cursor-pointer"
@@ -78,10 +75,7 @@ function selectImage(index) {
       </div>
     </div>
 
-    <div
-      class="grid grid-cols-4 grid-rows-3 md:grid-cols-8 md:grid-rows-6 gap-2"
-      v-if="activeTab === 1"
-    >
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-2" v-if="activeTab === 1">
       <div v-for="(cover, index) in coversCage" :key="index">
         <img
           class="w-32 cursor-pointer"
@@ -98,10 +92,7 @@ function selectImage(index) {
       </div>
     </div>
 
-    <div
-      class="grid grid-cols-4 grid-rows-3 md:grid-cols-8 md:grid-rows-6 gap-2"
-      v-if="activeTab === 2"
-    >
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-2" v-if="activeTab === 2">
       <div v-for="(cover, index) in coversCloud" :key="index">
         <img
           class="w-32 cursor-pointer"
@@ -118,10 +109,7 @@ function selectImage(index) {
       </div>
     </div>
 
-    <div
-      class="grid grid-cols-4 grid-rows-3 md:grid-cols-8 md:grid-rows-6 gap-2"
-      v-if="activeTab === 3"
-    >
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-2" v-if="activeTab === 3">
       <div v-for="(cover, index) in coversHexagon" :key="index">
         <img
           class="w-32 cursor-pointer"
@@ -138,10 +126,7 @@ function selectImage(index) {
       </div>
     </div>
 
-    <div
-      class="grid grid-cols-4 grid-rows-3 md:grid-cols-8 md:grid-rows-6 gap-2"
-      v-if="activeTab === 4"
-    >
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-2" v-if="activeTab === 4">
       <div v-for="(cover, index) in coversStar" :key="index">
         <img
           class="w-32 cursor-pointer"
@@ -158,10 +143,7 @@ function selectImage(index) {
       </div>
     </div>
 
-    <div
-      class="grid grid-cols-4 grid-rows-3 md:grid-cols-8 md:grid-rows-6 gap-2"
-      v-if="activeTab === 5"
-    >
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-2" v-if="activeTab === 5">
       <div v-for="(cover, index) in coversCircle" :key="index">
         <img
           class="w-32 cursor-pointer"
@@ -178,10 +160,7 @@ function selectImage(index) {
       </div>
     </div>
 
-    <div
-      class="grid grid-cols-4 grid-rows-3 md:grid-cols-8 md:grid-rows-6 gap-2"
-      v-if="activeTab === 6"
-    >
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-2" v-if="activeTab === 6">
       <div v-for="(cover, index) in coversFlower" :key="index">
         <img
           class="w-32 cursor-pointer"
@@ -198,10 +177,7 @@ function selectImage(index) {
       </div>
     </div>
 
-    <div
-      class="grid grid-cols-4 grid-rows-3 md:grid-cols-8 md:grid-rows-6 gap-2"
-      v-if="activeTab === 7"
-    >
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-2" v-if="activeTab === 7">
       <div v-for="(cover, index) in coversLeave" :key="index">
         <img
           class="w-32 cursor-pointer"
