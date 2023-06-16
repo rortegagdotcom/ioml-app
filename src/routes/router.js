@@ -47,6 +47,11 @@ const routes = [
     component: () => import('../components/Photo/PhotoDelete.vue'),
   },
   {
+    path: '/view/:albumid',
+    name: 'view-fullscreen',
+    component: () => import('../components/Carousel/Carousel.vue'),
+  },
+  {
     path: '/about',
     name: 'about',
     component: () => import('../components/About.vue'),
