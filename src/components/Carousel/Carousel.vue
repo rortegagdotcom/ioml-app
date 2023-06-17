@@ -1,34 +1,76 @@
 <script setup>
+import { ref, inject, onMounted, onUnmounted } from 'vue';
+import { useRoute } from 'vue-router';
+import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper';
+import { Navigation, Autoplay } from 'swiper';
 
-const modules = [Navigation];
+const route = useRoute();
+
+const albumId = route.params.albumid;
+const photos = ref([]);
+
+onMounted(async () => {
+  await axios
+    .get(`http://192.168.100.82:5748/api/albums/${albumId}/photos`)
+    .then((res) => {
+      photos.value = res.data[0];
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+});
+
+const modules = [Navigation, Autoplay];
+const autoplay = {
+  delay: 3000,
+  disableOnInteraction: false,
+};
+const loop = true;
+
+const showComponents = inject('showComponents');
+
+onMounted(() => {
+  showComponents.value = false;
+});
+
+onUnmounted(() => {
+  showComponents.value = true;
+});
 </script>
 <template>
-  <swiper :navigation="true" :modules="modules" class="mySwiper">
-    <swiper-slide>
-      <img
-        class="object-cover w-full h-screen"
-        src="https://cdn.pixabay.com/photo/2022/03/20/15/40/nature-7081138__340.jpg"
-        alt="image slide 1"
-      />
-    </swiper-slide>
-    <swiper-slide>
-      <img
-        class="object-cover w-full h-screen"
-        src="https://cdn.pixabay.com/photo/2022/07/24/17/55/wind-energy-7342177__340.jpg"
-        alt="image slide 2"
-      />
-    </swiper-slide>
-    <swiper-slide>
-      <img
-        class="object-cover w-full h-screen"
-        src="https://cdn.pixabay.com/photo/2022/07/26/03/35/jogger-7344979__340.jpg"
-        alt="image slide 3"
-      />
-    </swiper-slide>
-  </swiper>
+  <div class="fixed top-0 left-0 w-full h-full z-50">
+    <swiper
+      :navigation="true"
+      :modules="modules"
+      :autoplay="autoplay"
+      :loop="loop"
+      class="mySwiper"
+    >
+      <swiper-slide v-for="(photo, index) in photos" :key="index">
+        <img
+          class="object-cover w-full h-screen"
+          :src="photo.filename"
+          :alt="photo.name"
+        />
+      </swiper-slide>
+    </swiper>
+  </div>
 </template>
-<style></style>
+<style>
+@media (prefers-color-scheme: light) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    --swiper-navigation-color: #000;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    --swiper-navigation-color: #fff;
+  }
+}
+</style>

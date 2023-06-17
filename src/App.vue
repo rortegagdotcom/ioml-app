@@ -1,6 +1,10 @@
 <script setup>
+import { ref, provide } from 'vue';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
+
+const showComponents = ref(true);
+provide('showComponents', showComponents);
 </script>
 
 <template>

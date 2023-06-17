@@ -4,17 +4,22 @@ import { useRoute } from 'vue-router';
 
 const addAlbumPhoto = computed(() => {
   const route = useRoute();
+  const albumId = route.params.albumid;
   if (
     route.name === 'albums' ||
     route.name === 'albums-new' ||
     route.name === 'albums-edit' ||
     route.name === 'albums-delete'
-  ) {
+  )
     return '/albums/new';
-  } else {
-    const albumId = route.params.albumid;
-    return `/albums/${albumId}/photos/new`;
-  }
+  else return `/albums/${albumId}/photos/new`;
+});
+
+const viewPhotosFullScreen = computed(() => {
+  const route = useRoute();
+  const albumId = route.params.albumid;
+  if (route.name === 'albums-details') return `/view/${albumId}`;
+  else return '/';
 });
 </script>
 
@@ -30,7 +35,7 @@ const addAlbumPhoto = computed(() => {
         </picture>
       </router-link>
     </button>
-    <router-link to="/">
+    <router-link :to="viewPhotosFullScreen">
       <picture>
         <source
           media="(prefers-color-scheme: dark)"
