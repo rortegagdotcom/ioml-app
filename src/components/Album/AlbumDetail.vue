@@ -54,6 +54,7 @@ watchEffect(async () => {
     v-else
   >
     <Photo
+      class="cursor-pointer"
       v-for="photo in photos"
       :albumId="`${albums[0].id}`"
       :photo="photo"
