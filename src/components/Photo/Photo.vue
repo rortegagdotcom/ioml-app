@@ -19,6 +19,7 @@ const toggleOverlay = () => {
       class="w-full h-full object-cover rounded-xl"
       @click="toggleOverlay"
       :src="`${photo.filename}`"
+      :alt="`${photo.id}`"
     />
     <div
       class="absolute bottom-0 w-full h-16 bg-black bg-opacity-50 rounded-br-xl rounded-bl-xl flex items-center justify-evenly"

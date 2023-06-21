@@ -25,12 +25,11 @@ watchEffect(async () => {
 
 <template>
   <div class="text-gray-900 dark:text-gray-200">
-    <h1 class="text-center text-xl pb-5" v-if="photos">{{ photos[0].name }}</h1>
     <div className="flex relative justify-center" v-if="photos">
       <img
         class="object-cover rounded-xl w-full 2xl:w-1/2"
         :src="`${photos[0].filename}`"
-        :alt="`${photos[0].name}`"
+        :alt="`${photos[0].id}`"
       />
     </div>
   </div>

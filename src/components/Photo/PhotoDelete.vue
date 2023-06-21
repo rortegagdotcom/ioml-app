@@ -47,13 +47,8 @@ async function handleDeletePhoto() {
       <img
         class="rounded-xl w-full 2xl:w-1/2"
         :src="`${photos[0].filename}`"
-        :alt="`${photos[0].name}`"
+        :alt="`${photos[0].id}`"
       />
-      <div
-        className="absolute bottom-0 w-full 2xl:w-1/2 p-2 bg-black bg-opacity-50 rounded-br-xl rounded-bl-xl text-gray-200 text-center"
-      >
-        {{ photos[0].name }}
-      </div>
     </div>
     <div class="flex flex-wrap flex-row justify-evenly pt-10">
       <button
