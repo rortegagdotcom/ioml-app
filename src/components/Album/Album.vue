@@ -9,22 +9,14 @@ const props = defineProps({
     <router-link
       :to="{ name: 'albums-details', params: { albumid: album.id } }"
     >
-      <div class="album block w-80 h-96">
-        <div class="album-back album-inner" :class="`bg-${album.cover}`"></div>
-        <div class="album-pages album-inner"></div>
-        <div class="album-pages album-inner"></div>
-        <div class="album-cover album-inner" :class="`bg-${album.cover}`">
-          <div class="bg-gray-100 dark:bg-gray-900 p-3">
-            <h3
-              class="mb-2 text-2xl font-bold text-center text-gray-900 break-words dark:text-gray-100"
-            >
-              {{ album.name }}
-            </h3>
-          </div>
-        </div>
+      <div
+        class="album bg-gray-50 before:bg-gray-200 after:bg-gray-400 dark:bg-gray-950 dark:before:bg-gray-900"
+      >
+        <div class="cover" :class="`bg-${album.cover}`"></div>
+        <h2 class="text-gray-800 dark:text-gray-200">{{ album.name }}</h2>
       </div>
     </router-link>
-    <div class="flex flex-nowrap flex-row justify-around mt-2">
+    <div class="flex flex-nowrap flex-row justify-around mt-10">
       <button class="bg-gray-200 p-2 rounded-full dark:bg-gray-700">
         <router-link
           :to="{ name: 'albums-edit', params: { albumid: album.id } }"
@@ -67,106 +59,48 @@ const props = defineProps({
 @import '../Covers/css/covers/leave.css';
 
 .album {
-  perspective: 87.5rem;
+  width: 300px;
+  height: 200px;
+  transform: rotate(-5deg) skewX(10deg);
 }
-.album-inner,
-.album-pages::before,
-.album-pages::after {
+.album:hover {
+  cursor: pointer;
+}
+.album:before {
+  content: '';
+  width: 15px;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
+  transform: skewY(-45deg) translate(-15px, -7.5px);
+}
+.album:after {
+  content: '';
+  width: 100%;
+  height: 15px;
+  position: absolute;
   bottom: 0;
-  transform-origin: left center;
-  transition: transform 0.2s ease-in;
+  left: 0;
+  transform: skewX(-45deg) translate(7.5px, 15px);
 }
-.album-cover,
-.album-pages {
-  transform-style: preserve-3d;
+.album h2 {
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+  font-size: 1.5em;
+  max-width: 480px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background-clip: text;
 }
-.album-pages {
-  transform: scale(0.95, 0.9);
-  perspective: 2000px;
-}
-.album-pages::before,
-.album-pages::after {
-  background-color: #fff;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.075) 97%,
-    transparent
-  );
-  box-shadow: 1px 4px 5px 0 rgba(0, 0, 0, 0.05);
-  content: '';
-}
-.album-cover::before {
-  content: '';
+.album .cover {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-}
-.album-back,
-.album-pages {
-  right: 0;
-  bottom: 0;
-}
-.album-pages::after {
-  transition-delay: 0.12s;
-}
-.album-pages::before {
-  transition-delay: 0.105s;
-}
-.album-pages + .album-pages::after {
-  transition-delay: 0.09s;
-}
-.album-pages + .album-pages::before {
-  transition-delay: 0.075s;
-}
-.album-pages + .album-pages + .album-pages::after {
-  transition-delay: 0.06s;
-}
-.album-pages + .album-pages + .album-pages::before {
-  transition-delay: 0.045s;
-}
-.album-pages + .album-pages + .album-pages + .album-pages::after {
-  transition-delay: 0.03s;
-}
-.album-pages + .album-pages + .album-pages + .album-pages::before {
-  transition-delay: 0.015s;
-}
-.album:hover .album-back,
-.album:hover .album-cover::before {
-  box-shadow: inset -2px 0 1px rgba(0, 0, 0, 0.075);
-}
-.album:hover .album-cover {
-  transform: rotateY(-40deg);
-  transition-delay: 0s;
-}
-.album:hover .album-pages::after {
-  transform: rotateY(-12deg);
-}
-.album:hover .album-pages::before {
-  transform: rotateY(-8deg);
-}
-.album:hover .album-pages + .album-pages::after {
-  transform: rotateY(-20deg);
-}
-.album:hover .album-pages + .album-pages::before {
-  transform: rotateY(-16deg);
-}
-.album:hover .album-pages + .album-pages + .album-pages::after {
-  transform: rotateY(-28deg);
-}
-.album:hover .album-pages + .album-pages + .album-pages::before {
-  transform: rotateY(-24deg);
-}
-.album:hover .album-pages + .album-pages + .album-pages + .album-pages::after {
-  transform: rotateY(-36deg);
-}
-.album:hover .album-pages + .album-pages + .album-pages + .album-pages::before {
-  transform: rotateY(-32deg);
+  width: 100%;
+  height: 75%;
+  background-size: cover;
 }
 </style>
