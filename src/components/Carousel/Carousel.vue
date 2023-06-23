@@ -1,5 +1,5 @@
 <script setup>
-import { ref, inject, onMounted, onUnmounted } from 'vue';
+import { ref, inject, onMounted, onUnmounted, watchEffect } from 'vue';
 import { useRoute } from 'vue-router';
 import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -12,7 +12,7 @@ const route = useRoute();
 const albumId = route.params.albumid;
 const photos = ref([]);
 
-onMounted(async () => {
+watchEffect(async () => {
   await axios
     .get(`http://192.168.100.82:5748/api/albums/${albumId}/photos`)
     .then((res) => {

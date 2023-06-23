@@ -1,9 +1,8 @@
 <script setup>
 import axios from 'axios';
-import { ref, watchEffect } from 'vue';
+import { ref, inject, onMounted, onUnmounted, watchEffect } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 
-const router = useRouter();
 const route = useRoute();
 const photos = ref(null);
 const albumId = route.params.albumid;
@@ -21,17 +20,27 @@ watchEffect(async () => {
       });
   }
 });
+
+const showComponents = inject('showComponents');
+
+onMounted(() => {
+  showComponents.value = false;
+});
+
+onUnmounted(() => {
+  showComponents.value = true;
+});
 </script>
 
 <template>
-  <div class="text-gray-900 dark:text-gray-200">
-    <div className="flex relative justify-center" v-if="photos">
-      <img
-        class="object-cover rounded-xl w-full 2xl:w-1/2"
-        :src="`${photos[0].filename}`"
-        :alt="`${photos[0].id}`"
-      />
-    </div>
+    <div class="fixed top-0 left-0 w-full h-full z-50">
+      <div v-if="photos">
+        <img
+          class="h-screen mx-auto"
+          :src="photos[0].filename"
+          :alt="photos[0].name"
+        />
+      </div>
   </div>
 </template>
 
