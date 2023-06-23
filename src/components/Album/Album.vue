@@ -10,10 +10,10 @@ const props = defineProps({
       :to="{ name: 'albums-details', params: { albumid: album.id } }"
     >
       <div
-        class="album bg-gray-50 before:bg-gray-200 after:bg-gray-400 dark:bg-gray-950 dark:before:bg-gray-900"
+        class="w-48 h-48 mx-5 my-5 bg-gray-50 rotate-[-10deg] skew-x-[10deg] hover:cursor-pointer dark:bg-gray-950 before:content-[''] before:w-4 before:h-full before:bg-gray-200 before:absolute before:skew-y-[-45deg] before:translate-x-[-16px] before:translate-y-[8px] dark:before:bg-gray-900 after:w-full after:h-4 after:bg-gray-400 after:absolute after:skew-x-[-45deg] after:translate-x-[-8px] after:translate-y-[16px] after:bottom-0"
       >
-        <div class="cover" :class="`bg-${album.cover}`"></div>
-        <h2 class="text-gray-800 dark:text-gray-200">{{ album.name }}</h2>
+        <div class="h-3/4" :class="`bg-${album.cover}`"></div>
+        <h2 class="absolute text-[1.5em] text-gray-800 max-w-[180px] text-ellipsis overflow-hidden left-2.5 bottom-2.5 dark:text-gray-200">{{ album.name }}</h2>
       </div>
     </router-link>
     <div class="flex flex-nowrap flex-row justify-around mt-10">
@@ -57,50 +57,4 @@ const props = defineProps({
 @import '../Covers/css/covers/circle.css';
 @import '../Covers/css/covers/flower.css';
 @import '../Covers/css/covers/leave.css';
-
-.album {
-  width: 300px;
-  height: 200px;
-  transform: rotate(-5deg) skewX(10deg);
-}
-.album:hover {
-  cursor: pointer;
-}
-.album:before {
-  content: '';
-  width: 15px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: skewY(-45deg) translate(-15px, -7.5px);
-}
-.album:after {
-  content: '';
-  width: 100%;
-  height: 15px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: skewX(-45deg) translate(7.5px, 15px);
-}
-.album h2 {
-  position: absolute;
-  bottom: 5px;
-  left: 15px;
-  font-size: 1.5em;
-  max-width: 480px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  background-clip: text;
-}
-.album .cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 75%;
-  background-size: cover;
-}
 </style>

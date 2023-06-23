@@ -24,7 +24,7 @@ watchEffect(async () => {
   >
     There are no albums available
   </h1>
-  <div class="flex flex-wrap justify-center gap-10" v-else>
+  <div class="flex flex-wrap justify-center gap-12" v-else>
     <Album v-for="album in albums" :album="album" :key="album.id" />
   </div>
 </template>

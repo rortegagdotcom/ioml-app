@@ -51,7 +51,7 @@ onUnmounted(() => {
     >
       <swiper-slide v-for="(photo, index) in photos" :key="index">
         <img
-          class="object-cover w-full h-screen"
+          class="h-screen mx-auto"
           :src="photo.filename"
           :alt="photo.name"
         />
