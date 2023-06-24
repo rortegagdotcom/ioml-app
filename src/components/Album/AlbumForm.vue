@@ -2,6 +2,7 @@
 import axios from 'axios';
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import { toast } from 'vue3-toastify';
 
 import Covers from '../Covers/Covers.vue';
 
@@ -16,18 +17,27 @@ const albumId = route.params.albumid;
 
 async function createOrEditAlbum() {
   if (albumId) {
-    await axios.put(
-      `http://192.168.100.82:5748/api/albums/${albumId}`,
-      {
-        name: albumName.value,
-        cover: coverName.value,
-      },
-      {
-        headers: {
-          'Content-Type': 'application/json',
+    await axios
+      .put(
+        `http://192.168.100.82:5748/api/albums/${albumId}`,
+        {
+          name: albumName.value,
+          cover: coverName.value,
         },
-      }
-    );
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      )
+      .then((response) => {
+        console.log(response.data);
+        toast.success('Album updated');
+      })
+      .catch((error) => {
+        console.error('Error when sending data: ', error);
+        toast.error('Error when updating the album');
+      });
   } else {
     await axios
       .post(
@@ -42,16 +52,22 @@ async function createOrEditAlbum() {
           },
         }
       )
-      .then((response) => console.log(response.data))
+      .then((response) => {
+        console.log(response.data);
+        toast.success('Album added');
+      })
       .catch((error) => {
-        console.error('Error when sending data:', error);
+        console.error('Error when sending data: ', error);
+        toast.error('Error when creating the album');
       });
   }
 
   albumName.value = '';
   coverName.value = '';
 
-  router.push('/');
+  setTimeout(() => {
+    router.push('/');
+  }, 1000);
 }
 
 function setActiveTab(index) {
@@ -85,7 +101,7 @@ function handleCoverClicked(cover) {
           id="album-name"
           name="album-name"
           v-model="albumName"
-          maxlength="50"
+          maxlength="25"
           required
         />
       </div>

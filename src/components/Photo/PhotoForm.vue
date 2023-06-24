@@ -2,6 +2,7 @@
 import axios from 'axios';
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import { toast } from 'vue3-toastify';
 
 const route = useRoute();
 const router = useRouter();
@@ -22,12 +23,17 @@ async function createOrEditPhoto() {
           'Content-Type': 'multipart/form-data',
         },
       })
-      .then((response) => console.log(response.data))
+      .then((response) => {
+        console.log(response.data);
+        toast.success('Photo updated');
+      })
       .catch((error) => {
         console.error('Error when sending data:', error);
       });
 
-    router.go(-1);
+    setTimeout(() => {
+      router.go(-1);
+    }, 1000);
   } else {
     const formData = new FormData();
     for (let i = 0; i < photoFile.value.files.length; i++) {
@@ -41,9 +47,13 @@ async function createOrEditPhoto() {
           'Content-Type': 'multipart/form-data',
         },
       })
-      .then((response) => console.log(response.data))
+      .then((response) => {
+        console.log(response.data);
+        toast.success('Photos added');
+      })
       .catch((error) => {
-        console.error('Error when sending data:', error);
+        console.error('Error when adding photos: ', error);
+        toast.error('Error when adding photos');
       });
   }
 

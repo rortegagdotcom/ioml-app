@@ -2,6 +2,7 @@
 import axios from 'axios';
 import { ref, watchEffect } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
+import { toast } from 'vue3-toastify';
 
 const router = useRouter();
 const route = useRoute();
@@ -31,12 +32,16 @@ async function handleDeletePhoto() {
     .delete(`http://192.168.100.82:5748/api/photos/${photoId}`)
     .then(() => {
       console.log('Photo deleted');
+      toast.success('Photo deleted');
     })
     .catch((error) => {
       console.log('Error when deleting photo', error);
+      toast.error('Error when deleting photo');
     });
 
-  router.go(-1);
+  setTimeout(() => {
+    router.go(-1);
+  }, 1000);
 }
 </script>
 

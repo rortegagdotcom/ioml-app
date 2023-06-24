@@ -2,6 +2,7 @@
 import axios from 'axios';
 import { ref, watchEffect } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
+import { toast } from 'vue3-toastify';
 
 const router = useRouter();
 const route = useRoute();
@@ -29,13 +30,17 @@ async function handleDeleteAlbum() {
   await axios
     .delete(`http://192.168.100.82:5748/api/albums/${albumId}`)
     .then(() => {
+      toast.success('Album deleted');
       console.log('Album deleted');
     })
     .catch((error) => {
-      console.log('Error when deleting album', error);
+      console.log('Error when deleting the album', error);
+      toast.error('Error when deleting the album');
     });
 
-  router.go(-1);
+  setTimeout(() => {
+    router.go(-1);
+  }, 1000);
 }
 </script>
 
