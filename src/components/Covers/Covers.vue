@@ -47,7 +47,7 @@ function selectImage(index) {
       href="#"
       class="flex border rounded-lg justify-center p-1 border-gray-500"
       :class="{
-        'border-pink-500 text-pink-500 dark:border-orange-500 dark:text-orange-500':
+        'bg-pink-500 border-pink-500 text-gray-50 dark:bg-orange-500 dark:border-orange-500 dark:text-gray-800':
           activeTab === index,
       }"
       @click.prevent="setActiveTab(index)"
