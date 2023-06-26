@@ -21,30 +21,22 @@ const props = defineProps({
       </div>
     </router-link>
     <div class="flex flex-nowrap flex-row justify-around mt-10">
-      <button class="bg-gray-200 p-2 rounded-full dark:bg-gray-700">
+      <button
+        class="p-2 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+      >
         <router-link
           :to="{ name: 'albums-edit', params: { albumid: album.id } }"
         >
-          <picture>
-            <source
-              media="(prefers-color-scheme: dark)"
-              srcset="/edit-dark.svg"
-            />
-            <img class="h-12" src="/edit-light.svg" alt="Edit Album" />
-          </picture>
+          <img class="h-12" src="/edit.svg" alt="Edit Album" />
         </router-link>
       </button>
-      <button class="bg-gray-200 p-2 rounded-full dark:bg-gray-700">
+      <button
+        class="p-2 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+      >
         <router-link
           :to="{ name: 'albums-delete', params: { albumid: album.id } }"
         >
-          <picture>
-            <source
-              media="(prefers-color-scheme: dark)"
-              srcset="/delete-dark.svg"
-            />
-            <img class="h-12" src="/delete-light.svg" alt="Delete Album" />
-          </picture>
+          <img class="h-12" src="/delete.svg" alt="Delete Album" />
         </router-link>
       </button>
     </div>

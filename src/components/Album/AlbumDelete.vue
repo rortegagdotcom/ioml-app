@@ -68,13 +68,13 @@ async function handleDeleteAlbum() {
         class="text-white bg-gradient-to-br from-red-500 to-red-900 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 font-medium rounded-lg p-5 text-center mr-2 mb-2"
         @click.prevent="goBack()"
       >
-        <img class="h-12" src="/cancel-dark.svg" alt="Cancel delete album" />
+        <img class="h-12" src="/cancel.svg" alt="Cancel delete album" />
       </button>
       <button
         class="text-white bg-gradient-to-br from-green-500 to-green-900 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg p-5 text-center mr-2 mb-2"
         @click.prevent="handleDeleteAlbum()"
       >
-        <img class="h-12" src="/accept-dark.svg" alt="Accept delete album" />
+        <img class="h-12" src="/accept.svg" alt="Accept delete album" />
       </button>
     </div>
   </div>

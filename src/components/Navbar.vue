@@ -42,12 +42,11 @@ const logoUrl = computed(() => {
   <nav
     class="flex items-center justify-between p-3 bg-gray-100 dark:bg-gray-900"
   >
-    <button class="bg-gray-200 p-2 rounded-full dark:bg-gray-700">
+    <button
+      class="p-2 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+    >
       <router-link :to="addAlbumPhoto">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="/add-dark.svg" />
-          <img class="h-12" src="/add-light.svg" alt="Add" />
-        </picture>
+        <img class="h-12" src="/add.svg" alt="Add" />
       </router-link>
     </button>
     <router-link :to="viewPhotosFullScreen">
@@ -57,10 +56,7 @@ const logoUrl = computed(() => {
       </picture>
     </router-link>
     <div>
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="/add-dark.svg" />
-        <img class="h-12" src="/add-light.svg" />
-      </picture>
+      <img class="h-12" src="/add.svg" />
     </div>
   </nav>
 </template>
