@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './routes/router';
 import Vue3Toastify, { toast } from 'vue3-toastify';
+import i18n from './i18n';
 
 import 'tailwindcss/tailwind.css';
 import 'vue3-toastify/dist/index.css';
@@ -20,4 +21,5 @@ createApp(App)
     draggable: true,
     pauseOnHover: false,
   })
+  .use(i18n)
   .mount('#app');

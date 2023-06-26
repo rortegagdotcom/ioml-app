@@ -3,9 +3,13 @@ import axios from 'axios';
 import { ref, watchEffect } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { toast } from 'vue3-toastify';
+import { useI18n } from 'vue-i18n';
 
 const router = useRouter();
 const route = useRoute();
+
+const { t } = useI18n();
+
 const photos = ref(null);
 const albumId = route.params.albumid;
 const photoId = route.params.photoid;
@@ -32,7 +36,7 @@ async function handleDeletePhoto() {
     .delete(`http://192.168.100.82:5748/api/photos/${photoId}`)
     .then(() => {
       console.log('Photo deleted');
-      toast.success('Photo deleted');
+      toast.success(t('toastPhotoDeleted'));
     })
     .catch((error) => {
       console.log('Error when deleting photo', error);
@@ -47,7 +51,7 @@ async function handleDeletePhoto() {
 
 <template>
   <div class="text-gray-900 dark:text-gray-200">
-    <h1 class="text-center text-xl pb-5">Are you sure to delete?</h1>
+    <h1 class="text-center text-xl pb-5">{{ t('sureToDelete') }}</h1>
     <div className="flex relative justify-center" v-if="photos">
       <img
         class="rounded-xl w-full 2xl:w-1/2"
@@ -57,13 +61,13 @@ async function handleDeletePhoto() {
     </div>
     <div class="flex flex-wrap flex-row justify-evenly pt-10">
       <button
-        class="text-white bg-gradient-to-br from-red-500 to-red-900 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 font-medium rounded-lg p-5 text-center mr-2 mb-2"
+        class="bg-gradient-to-br from-red-500 to-red-900 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 font-medium rounded-full p-5"
         @click.prevent="goBack()"
       >
         <img class="h-12" src="/cancel.svg" alt="Cancel delete photo" />
       </button>
       <button
-        class="text-white bg-gradient-to-br from-green-500 to-green-900 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg p-5 text-center mr-2 mb-2"
+        class="bg-gradient-to-br from-green-500 to-green-900 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-full p-5"
         @click.prevent="handleDeletePhoto()"
       >
         <img class="h-12" src="/accept.svg" alt="Accept delete photo" />

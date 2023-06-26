@@ -25,7 +25,7 @@ watchEffect(async () => {
 
 const modules = [Navigation, Autoplay];
 const autoplay = {
-  delay: 3000,
+  delay: 300000,
   disableOnInteraction: false,
 };
 const loop = true;
@@ -50,11 +50,9 @@ onUnmounted(() => {
       class="mySwiper"
     >
       <swiper-slide v-for="(photo, index) in photos" :key="index">
-        <img
-          class="h-screen mx-auto"
-          :src="photo.filename"
-          :alt="photo.name"
-        />
+        <div class="flex justify-center items-center h-screen w-full">
+          <img :src="photo.filename" :alt="photo.name" />
+        </div>
       </swiper-slide>
     </swiper>
   </div>

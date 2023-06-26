@@ -12,7 +12,7 @@ provide('showComponents', showComponents);
 <template>
   <Header />
 
-  <main class="min-h-screen px-12 py-5 bg-gray-50 dark:bg-gray-800">
+  <main class="min-h-screen px-3 py-5 bg-gray-50 dark:bg-gray-800">
     <router-view />
   </main>
 

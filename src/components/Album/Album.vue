@@ -14,7 +14,7 @@ const props = defineProps({
       >
         <div class="h-3/4" :class="`bg-${album.cover}`"></div>
         <h2
-          class="absolute text-[1.5em] text-gray-800 max-w-[180px] text-ellipsis overflow-hidden left-2.5 bottom-2.5 dark:text-gray-200"
+          class="absolute text-[1.5em] text-gray-900 max-w-[180px] text-ellipsis overflow-hidden left-2.5 bottom-2.5 dark:text-gray-50"
         >
           {{ album.name }}
         </h2>

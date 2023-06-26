@@ -33,14 +33,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div class="fixed top-0 left-0 w-full h-full z-50">
-      <div v-if="photos">
-        <img
-          class="h-screen mx-auto"
-          :src="photos[0].filename"
-          :alt="photos[0].name"
-        />
-      </div>
+  <div class="fixed top-0 left-0 w-full h-full z-50">
+    <div class="flex justify-center items-center h-screen w-full" v-if="photos">
+      <img :src="photos[0].filename" :alt="photos[0].name" />
+    </div>
   </div>
 </template>
 

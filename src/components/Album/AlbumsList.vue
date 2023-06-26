@@ -19,7 +19,7 @@ watchEffect(async () => {
 
 <template>
   <h1
-    class="text-center text-2xl font-bold text-black dark:text-white"
+    class="text-center text-2xl font-bold text-gray-900 dark:text-gray-50"
     v-if="albums < 1"
   >
     There are no albums available

@@ -3,11 +3,14 @@ import axios from 'axios';
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { toast } from 'vue3-toastify';
+import { useI18n } from 'vue-i18n';
 
 import Covers from '../Covers/Covers.vue';
 
 const router = useRouter();
 const route = useRoute();
+
+const { t } = useI18n();
 
 const albumName = ref('');
 const coverName = ref('wave-1');
@@ -32,7 +35,7 @@ async function createOrEditAlbum() {
       )
       .then((response) => {
         console.log(response.data);
-        toast.success('Album updated');
+        toast.success(t('toastAlbumUpdated'));
       })
       .catch((error) => {
         console.error('Error when sending data: ', error);
@@ -54,7 +57,7 @@ async function createOrEditAlbum() {
       )
       .then((response) => {
         console.log(response.data);
-        toast.success('Album added');
+        toast.success(t('toastAlbumAdded'));
       })
       .catch((error) => {
         console.error('Error when sending data: ', error);
@@ -80,8 +83,8 @@ function handleCoverClicked(cover) {
 </script>
 
 <template>
-  <h1 class="text-center text-2xl font-bold text-gray-900 dark:text-gray-100">
-    {{ albumId ? 'Update Album' : 'Create Album' }}
+  <h1 class="text-center text-2xl font-bold text-gray-900 dark:text-gray-50">
+    {{ albumId ? t('updateAlbum') : t('createAlbum') }}
   </h1>
   <form
     class="flex justify-center items-center flex-col"
@@ -91,12 +94,12 @@ function handleCoverClicked(cover) {
     <div class="m-5">
       <div>
         <label
-          class="inline-block text-lg font-bold text-black dark:text-white mb-2"
+          class="inline-block text-lg font-bold text-gray-900 dark:text-gray-50 mb-2"
           for="album-name"
-          >Album Name</label
+          >{{ t('albumName') }}</label
         >
         <input
-          class="block w-full p-5 text-black border border-gray-300 rounded-lg bg-gray-50 sm:text-md dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+          class="block w-full p-5 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-50"
           type="text"
           id="album-name"
           name="album-name"
@@ -106,8 +109,8 @@ function handleCoverClicked(cover) {
         />
       </div>
       <label
-        class="inline-block text-lg mt-5 mb-2 font-bold text-black dark:text-white"
-        >Select a Cover</label
+        class="inline-block text-lg mt-5 mb-2 font-bold text-gray-900 dark:text-gray-50"
+        >{{ t('selectCover') }}</label
       >
       <Covers
         :activeTab="activeTab"
@@ -116,10 +119,10 @@ function handleCoverClicked(cover) {
       />
       <div class="flex justify-center items-center pt-5">
         <button
-          class="text-white bg-gradient-to-br from-pink-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2"
+          class="text-gray-50 bg-gradient-to-br from-pink-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2"
           type="submit"
         >
-          {{ albumId ? 'Update Album' : 'Create Album' }}
+          {{ albumId ? t('updateAlbum') : t('createAlbum') }}
         </button>
       </div>
     </div>

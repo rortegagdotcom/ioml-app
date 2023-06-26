@@ -9,10 +9,10 @@ const year = date.getFullYear();
 
 <template>
   <footer
-    class="flex justify-center sticky w-full bg-gray-200 dark:bg-gray-900"
+    class="flex justify-center sticky w-full bg-gray-100 dark:bg-gray-900"
     v-show="showComponents"
   >
-    <p class="text-gray-900 dark:text-gray-200">
+    <p class="text-gray-900 dark:text-gray-50">
       <router-link to="/about">{{ year }} IOML App</router-link>
     </p>
   </footer>

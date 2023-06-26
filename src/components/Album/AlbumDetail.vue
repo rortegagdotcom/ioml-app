@@ -38,13 +38,13 @@ watchEffect(async () => {
 
 <template>
   <h1
-    class="text-center text-2xl font-bold text-gray-900 m-5 dark:text-gray-100"
+    class="text-center text-2xl font-bold text-gray-900 m-5 dark:text-gray-50"
     v-if="albums"
   >
     {{ albums[0].name }}
   </h1>
   <h2
-    class="text-center text-2xl font-bold text-gray-900 m-5 dark:text-gray-100"
+    class="text-center text-2xl font-bold text-gray-900 m-5 dark:text-gray-50"
     v-if="photos < 1"
   >
     There are no photos available
