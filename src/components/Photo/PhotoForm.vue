@@ -4,6 +4,7 @@ import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { toast } from 'vue3-toastify';
 import { useI18n } from 'vue-i18n';
+import imageCompression from 'browser-image-compression';
 
 const route = useRoute();
 const router = useRouter();
@@ -14,10 +15,30 @@ const albumId = route.params.albumid;
 const photoId = route.params.photoid;
 const photoFile = ref(null);
 
+async function compressImage(file) {
+  try {
+    const options = {
+      maxSizeMB: 1,
+      maxWidthOrHeight: 1920,
+      useWebWorker: true,
+    };
+    const compressedFile = await imageCompression(file, options);
+    return compressedFile;
+  } catch (error) {
+    console.error('Error al comprimir la imagen:', error);
+    return null;
+  }
+}
+
 async function createOrEditPhoto() {
   if (photoId) {
     const formData = new FormData();
-    formData.append('photo', photoFile.value.files[0]);
+
+    const originalFile = photoFile.value.files[0];
+    const compressedFile = await compressImage(originalFile);
+
+    if (!compressedFile) formData.append('photo', photoFile.value.files[0]);
+    else formData.append('photo', compressImage);
     formData.append('photoId', photoId);
 
     await axios
@@ -39,8 +60,12 @@ async function createOrEditPhoto() {
     }, 1000);
   } else {
     const formData = new FormData();
+
     for (let i = 0; i < photoFile.value.files.length; i++) {
-      formData.append('photo', photoFile.value.files[i]);
+      const originalFile = photoFile.value.files[i];
+      const compressedFile = await compressImage(originalFile);
+      if (!compressedFile) formData.append('photo', compressedFile);
+      else formData.append('photo', photoFile.value.files[i]);
     }
     formData.append('albumId', albumId);
 
