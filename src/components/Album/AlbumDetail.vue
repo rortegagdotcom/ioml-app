@@ -1,10 +1,14 @@
 <script setup>
 import { ref, watchEffect } from 'vue';
 import { useRoute } from 'vue-router';
+import { useI18n } from 'vue-i18n';
 import axios from 'axios';
 import Photo from '../Photo/Photo.vue';
 
 const route = useRoute();
+
+const { t } = useI18n();
+
 const albums = ref(null);
 const photos = ref(null);
 const albumId = route.params.albumid;
@@ -47,7 +51,7 @@ watchEffect(async () => {
     class="text-center text-2xl font-bold text-gray-900 m-5 dark:text-gray-50"
     v-if="photos < 1"
   >
-    There are no photos available
+    {{ t('noPhotos') }}
   </h2>
   <div
     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"

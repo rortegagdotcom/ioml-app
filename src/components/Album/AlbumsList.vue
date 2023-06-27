@@ -1,9 +1,13 @@
 <script setup>
 import { ref, watchEffect } from 'vue';
 import axios from 'axios';
+import { useI18n } from 'vue-i18n';
+
 import Album from './Album.vue';
 
 const albums = ref(null);
+
+const { t } = useI18n();
 
 watchEffect(async () => {
   await axios
@@ -22,7 +26,7 @@ watchEffect(async () => {
     class="text-center text-2xl font-bold text-gray-900 dark:text-gray-50"
     v-if="albums < 1"
   >
-    There are no albums available
+    {{ t('noAlbums') }}
   </h1>
   <div class="flex flex-wrap justify-center gap-12" v-else>
     <Album v-for="album in albums" :album="album" :key="album.id" />

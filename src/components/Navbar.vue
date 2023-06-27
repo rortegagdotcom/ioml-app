@@ -56,7 +56,13 @@ const logoUrl = computed(() => {
       </picture>
     </router-link>
     <div>
-      <img class="h-12" src="/add.svg" />
+      <picture>
+        <source
+          media="(prefers-color-scheme: dark)"
+          srcset="/profile-dark.svg"
+        />
+        <img class="h-12" src="/profile-light.svg" />
+      </picture>
     </div>
   </nav>
 </template>
