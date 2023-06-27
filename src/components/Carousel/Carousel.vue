@@ -14,7 +14,7 @@ const photos = ref([]);
 
 watchEffect(async () => {
   await axios
-    .get(`http://192.168.100.82:5748/api/albums/${albumId}/photos`)
+    .get(`http://localhost:5748/api/albums/${albumId}/photos`)
     .then((res) => {
       photos.value = res.data[0];
     })

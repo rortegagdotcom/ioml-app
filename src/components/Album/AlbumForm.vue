@@ -22,7 +22,7 @@ async function createOrEditAlbum() {
   if (albumId) {
     await axios
       .put(
-        `http://192.168.100.82:5748/api/albums/${albumId}`,
+        `http://localhost:5748/api/albums/${albumId}`,
         {
           name: albumName.value,
           cover: coverName.value,
@@ -44,7 +44,7 @@ async function createOrEditAlbum() {
   } else {
     await axios
       .post(
-        'http://192.168.100.82:5748/api/albums',
+        'http://localhost:5748/api/albums',
         {
           name: albumName.value,
           cover: coverName.value,

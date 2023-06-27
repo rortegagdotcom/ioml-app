@@ -16,7 +16,7 @@ const albumId = route.params.albumid;
 watchEffect(async () => {
   if (albumId) {
     await axios
-      .get(`http://192.168.100.82:5748/api/albums/${albumId}`)
+      .get(`http://localhost:5748/api/albums/${albumId}`)
       .then((res) => {
         albums.value = res.data[0];
       })
@@ -32,7 +32,7 @@ function goBack() {
 
 async function handleDeleteAlbum() {
   await axios
-    .delete(`http://192.168.100.82:5748/api/albums/${albumId}`)
+    .delete(`http://localhost:5748/api/albums/${albumId}`)
     .then(() => {
       toast.success(t('toastAlbumDeleted'));
       console.log('Album deleted');
