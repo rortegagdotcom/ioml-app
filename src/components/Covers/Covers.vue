@@ -10,16 +10,54 @@ import coversCircle from '../../routes/covers/circle';
 import coversFlower from '../../routes/covers/flower';
 import coversLeave from '../../routes/covers/leave';
 
+const props = defineProps({
+  activeTab: Number,
+  setActiveTab: Function,
+});
+
 const tabs = ref([
-  'Wave',
-  'Cage',
-  'Cloud',
-  'Hexagon',
-  'Star',
-  'Circle',
-  'Flower',
-  'Leave',
+  {
+    name: 'Wave',
+    covers: coversWave,
+    coverName: 'wave',
+  },
+  {
+    name: 'Cage',
+    covers: coversCage,
+    coverName: 'cage',
+  },
+  {
+    name: 'Cloud',
+    covers: coversCloud,
+    coverName: 'cloud',
+  },
+  {
+    name: 'Hexagon',
+    covers: coversHexagon,
+    coverName: 'hexagon',
+  },
+  {
+    name: 'Star',
+    covers: coversStar,
+    coverName: 'star',
+  },
+  {
+    name: 'Circle',
+    covers: coversCircle,
+    coverName: 'circle',
+  },
+  {
+    name: 'Flower',
+    covers: coversFlower,
+    coverName: 'flower',
+  },
+  {
+    name: 'Leave',
+    covers: coversLeave,
+    coverName: 'leave',
+  },
 ]);
+
 const activeTab = ref(0);
 
 function setActiveTab(index) {
@@ -54,131 +92,12 @@ function selectImage(index) {
       v-for="(tab, index) in tabs"
       :key="index"
     >
-      {{ tab }}
+      {{ tab.name }}
     </a>
   </div>
   <div class="py-5">
-    <div class="grid grid-cols-3 md:grid-cols-6 gap-2" v-if="activeTab === 0">
-      <div v-for="(cover, index) in coversWave" :key="index">
-        <img
-          class="w-32 cursor-pointer"
-          :src="cover"
-          @click="
-            handleCoverClick(cover);
-            selectImage(index);
-          "
-          :class="{
-            'border-8 border-solid border-pink-500 dark:border-orange-500':
-              selectedIndex == index,
-          }"
-        />
-      </div>
-    </div>
-
-    <div class="grid grid-cols-3 md:grid-cols-6 gap-2" v-if="activeTab === 1">
-      <div v-for="(cover, index) in coversCage" :key="index">
-        <img
-          class="w-32 cursor-pointer"
-          :src="cover"
-          @click="
-            handleCoverClick(cover);
-            selectImage(index);
-          "
-          :class="{
-            'border-8 border-solid border-pink-500 dark:border-orange-500':
-              selectedIndex == index,
-          }"
-        />
-      </div>
-    </div>
-
-    <div class="grid grid-cols-3 md:grid-cols-6 gap-2" v-if="activeTab === 2">
-      <div v-for="(cover, index) in coversCloud" :key="index">
-        <img
-          class="w-32 cursor-pointer"
-          :src="cover"
-          @click="
-            handleCoverClick(cover);
-            selectImage(index);
-          "
-          :class="{
-            'border-8 border-solid border-pink-500 dark:border-orange-500':
-              selectedIndex == index,
-          }"
-        />
-      </div>
-    </div>
-
-    <div class="grid grid-cols-3 md:grid-cols-6 gap-2" v-if="activeTab === 3">
-      <div v-for="(cover, index) in coversHexagon" :key="index">
-        <img
-          class="w-32 cursor-pointer"
-          :src="cover"
-          @click="
-            handleCoverClick(cover);
-            selectImage(index);
-          "
-          :class="{
-            'border-8 border-solid border-pink-500 dark:border-orange-500':
-              selectedIndex == index,
-          }"
-        />
-      </div>
-    </div>
-
-    <div class="grid grid-cols-3 md:grid-cols-6 gap-2" v-if="activeTab === 4">
-      <div v-for="(cover, index) in coversStar" :key="index">
-        <img
-          class="w-32 cursor-pointer"
-          :src="cover"
-          @click="
-            handleCoverClick(cover);
-            selectImage(index);
-          "
-          :class="{
-            'border-8 border-solid border-pink-500 dark:border-orange-500':
-              selectedIndex == index,
-          }"
-        />
-      </div>
-    </div>
-
-    <div class="grid grid-cols-3 md:grid-cols-6 gap-2" v-if="activeTab === 5">
-      <div v-for="(cover, index) in coversCircle" :key="index">
-        <img
-          class="w-32 cursor-pointer"
-          :src="cover"
-          @click="
-            handleCoverClick(cover);
-            selectImage(index);
-          "
-          :class="{
-            'border-8 border-solid border-pink-500 dark:border-orange-500':
-              selectedIndex == index,
-          }"
-        />
-      </div>
-    </div>
-
-    <div class="grid grid-cols-3 md:grid-cols-6 gap-2" v-if="activeTab === 6">
-      <div v-for="(cover, index) in coversFlower" :key="index">
-        <img
-          class="w-32 cursor-pointer"
-          :src="cover"
-          @click="
-            handleCoverClick(cover);
-            selectImage(index);
-          "
-          :class="{
-            'border-8 border-solid border-pink-500 dark:border-orange-500':
-              selectedIndex == index,
-          }"
-        />
-      </div>
-    </div>
-
-    <div class="grid grid-cols-3 md:grid-cols-6 gap-2" v-if="activeTab === 7">
-      <div v-for="(cover, index) in coversLeave" :key="index">
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-2" v-if="activeTab >= 0">
+      <div v-for="(cover, index) in tabs[activeTab].covers" :key="index">
         <img
           class="w-32 cursor-pointer"
           :src="cover"

@@ -22,18 +22,23 @@ const { t } = useI18n();
       <li class="text-xl text-gray-900 dark:text-gray-50">
         Vue 3 Composition API
       </li>
-      <li class="text-xl text-gray-900 dark:text-gray-50">Vue Router</li>
-      <li class="text-xl text-gray-900 dark:text-gray-50">Vue 3 Toastify</li>
-      <li class="text-xl text-gray-900 dark:text-gray-50">Vue 3 i18n</li>
-      <li class="text-xl text-gray-900 dark:text-gray-50">Axios</li>
-      <li class="text-xl text-gray-900 dark:text-gray-50">Swiper</li>
+      <li class="text-xl text-gray-900 dark:text-gray-50">vue-router</li>
+      <li class="text-xl text-gray-900 dark:text-gray-50">vue3-toastify</li>
+      <li class="text-xl text-gray-900 dark:text-gray-50">vue-i18n</li>
+      <li class="text-xl text-gray-900 dark:text-gray-50">axios</li>
+      <li class="text-xl text-gray-900 dark:text-gray-50">swiper</li>
+      <li class="text-xl text-gray-900 dark:text-gray-50">
+        browser-image-compression
+      </li>
     </ul>
     <p class="text-xl text-gray-900 dark:text-gray-50 mt-5">API:</p>
     <ul>
       <li class="text-xl text-gray-900 dark:text-gray-50">node.js</li>
-      <li class="text-xl text-gray-900 dark:text-gray-50">Express</li>
+      <li class="text-xl text-gray-900 dark:text-gray-50">express</li>
       <li class="text-xl text-gray-900 dark:text-gray-50">multer</li>
-      <li class="text-xl text-gray-900 dark:text-gray-50">webp-converter</li>
+      <li class="text-xl text-gray-900 dark:text-gray-50">mysql2</li>
+      <li class="text-xl text-gray-900 dark:text-gray-50">dotenv</li>
+      <li class="text-xl text-gray-900 dark:text-gray-50">cors</li>
     </ul>
   </article>
 </template>

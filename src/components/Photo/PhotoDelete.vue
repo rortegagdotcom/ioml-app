@@ -1,9 +1,11 @@
 <script setup>
-import axios from 'axios';
 import { ref, watchEffect } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { toast } from 'vue3-toastify';
 import { useI18n } from 'vue-i18n';
+import axios from 'axios';
+
+import IOMLActionButton from '../Buttons/IOMLActionButton.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -60,18 +62,18 @@ async function handleDeletePhoto() {
       />
     </div>
     <div class="flex flex-wrap flex-row justify-evenly pt-10">
-      <button
-        class="bg-gradient-to-br from-red-500 to-red-900 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 font-medium rounded-full p-5"
-        @click.prevent="goBack()"
-      >
-        <img class="h-12" src="/cancel.svg" alt="Cancel delete photo" />
-      </button>
-      <button
-        class="bg-gradient-to-br from-green-500 to-green-900 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-full p-5"
-        @click.prevent="handleDeletePhoto()"
-      >
-        <img class="h-12" src="/accept.svg" alt="Accept delete photo" />
-      </button>
+      <IOMLActionButton
+        :action="goBack"
+        :icon="'/cancel.svg'"
+        :altText="'Cancel'"
+        :color="'red'"
+      />
+      <IOMLActionButton
+        :action="handleDeletePhoto"
+        :icon="'/accept.svg'"
+        :altText="'Accept'"
+        :color="'green'"
+      />
     </div>
   </div>
 </template>

@@ -1,4 +1,6 @@
 <script setup>
+import IOMLButton from '../Buttons/IOMLButton.vue';
+
 const props = defineProps({
   album: Object,
 });
@@ -21,24 +23,15 @@ const props = defineProps({
       </div>
     </router-link>
     <div class="flex flex-nowrap flex-row justify-around mt-10">
-      <button
-        class="p-2 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+      <router-link :to="{ name: 'albums-edit', params: { albumid: album.id } }">
+        <IOMLButton :icon="'/edit.svg'" :alt="'Edit'" />
+      </router-link>
+
+      <router-link
+        :to="{ name: 'albums-delete', params: { albumid: album.id } }"
       >
-        <router-link
-          :to="{ name: 'albums-edit', params: { albumid: album.id } }"
-        >
-          <img class="h-12" src="/edit.svg" alt="Edit Album" />
-        </router-link>
-      </button>
-      <button
-        class="p-2 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
-      >
-        <router-link
-          :to="{ name: 'albums-delete', params: { albumid: album.id } }"
-        >
-          <img class="h-12" src="/delete.svg" alt="Delete Album" />
-        </router-link>
-      </button>
+        <IOMLButton :icon="'/delete.svg'" :alt="'Delete'" />
+      </router-link>
     </div>
   </div>
 </template>

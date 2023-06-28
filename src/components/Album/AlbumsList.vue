@@ -1,7 +1,7 @@
 <script setup>
 import { ref, watchEffect } from 'vue';
-import axios from 'axios';
 import { useI18n } from 'vue-i18n';
+import axios from 'axios';
 
 import Album from './Album.vue';
 

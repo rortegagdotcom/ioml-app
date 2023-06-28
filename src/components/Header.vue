@@ -1,5 +1,6 @@
 <script setup>
 import { inject } from 'vue';
+
 import Navbar from './Navbar.vue';
 
 const showComponents = inject('showComponents');

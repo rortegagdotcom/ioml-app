@@ -1,10 +1,11 @@
 <script setup>
-import axios from 'axios';
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { toast } from 'vue3-toastify';
 import { useI18n } from 'vue-i18n';
+import axios from 'axios';
 
+import IOMLFormButton from '../Buttons/IOMLFormButton.vue';
 import Covers from '../Covers/Covers.vue';
 
 const router = useRouter();
@@ -14,7 +15,7 @@ const { t } = useI18n();
 
 const albumName = ref('');
 const coverName = ref('wave-1');
-const activeTab = ref(1);
+const activeTab = ref(0);
 
 const albumId = route.params.albumid;
 
@@ -94,7 +95,7 @@ function handleCoverClicked(cover) {
     <div class="m-5">
       <div>
         <label
-          class="inline-block text-lg font-bold text-gray-900 dark:text-gray-50 mb-2"
+          class="inline-block text-lg mb-2 font-bold text-gray-900 dark:text-gray-50"
           for="album-name"
           >{{ t('albumName') }}</label
         >
@@ -114,16 +115,15 @@ function handleCoverClicked(cover) {
       >
       <Covers
         :activeTab="activeTab"
-        :setActiveTab="setActiveTab"
+        :setActiveTab="setActiveTab()"
         @cover-clicked="handleCoverClicked"
       />
       <div class="flex justify-center items-center pt-5">
-        <button
-          class="text-gray-50 bg-gradient-to-br from-pink-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2"
-          type="submit"
-        >
-          {{ albumId ? t('updateAlbum') : t('createAlbum') }}
-        </button>
+        <IOMLFormButton
+          :id="albumId"
+          :updateText="'updateAlbum'"
+          :createText="'createAlbum'"
+        />
       </div>
     </div>
   </form>

@@ -2,6 +2,8 @@
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
+import IOMLButton from './Buttons/IOMLButton.vue';
+
 const addAlbumPhoto = computed(() => {
   const route = useRoute();
   const albumId = route.params.albumid;
@@ -42,13 +44,9 @@ const logoUrl = computed(() => {
   <nav
     class="flex items-center justify-between p-3 bg-gray-100 dark:bg-gray-900"
   >
-    <button
-      class="p-2 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
-    >
-      <router-link :to="addAlbumPhoto">
-        <img class="h-12" src="/add.svg" alt="Add" />
-      </router-link>
-    </button>
+    <router-link :to="addAlbumPhoto">
+      <IOMLButton :icon="'/add.svg'" :alt="'Add'" />
+    </router-link>
     <router-link :to="viewPhotosFullScreen">
       <picture>
         <source media="(prefers-color-scheme: dark)" :srcset="logoUrl.dark" />

@@ -3,6 +3,7 @@ import { ref, watchEffect } from 'vue';
 import { useRoute } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import axios from 'axios';
+
 import Photo from '../Photo/Photo.vue';
 
 const route = useRoute();

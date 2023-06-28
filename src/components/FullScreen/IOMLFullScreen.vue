@@ -3,9 +3,10 @@ import { ref, inject, onMounted, onUnmounted, watchEffect } from 'vue';
 import { useRoute } from 'vue-router';
 import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation, Autoplay } from 'swiper';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation, Autoplay } from 'swiper';
 
 const route = useRoute();
 
@@ -50,8 +51,12 @@ onUnmounted(() => {
       class="mySwiper"
     >
       <swiper-slide v-for="(photo, index) in photos" :key="index">
-        <div class="flex justify-center items-center h-screen w-full">
-          <img :src="photo.filename" :alt="photo.name" />
+        <div class="flex justify-center items-center w-full h-screen">
+          <img
+            class="max-w-full max-h-full"
+            :src="photo.filename"
+            :alt="photo.name"
+          />
         </div>
       </swiper-slide>
     </swiper>

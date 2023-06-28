@@ -49,7 +49,7 @@ const routes = [
   {
     path: '/view/:albumid',
     name: 'view-fullscreen',
-    component: () => import('../components/Carousel/Carousel.vue'),
+    component: () => import('../components/FullScreen/IOMLFullScreen.vue'),
   },
   {
     path: '/about',

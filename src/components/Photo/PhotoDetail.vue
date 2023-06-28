@@ -1,7 +1,7 @@
 <script setup>
-import axios from 'axios';
 import { ref, inject, onMounted, onUnmounted, watchEffect } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
+import { useRoute } from 'vue-router';
+import axios from 'axios';
 
 const route = useRoute();
 const photos = ref(null);
@@ -34,8 +34,12 @@ onUnmounted(() => {
 
 <template>
   <div class="fixed top-0 left-0 w-full h-full z-50">
-    <div class="flex justify-center items-center h-screen w-full" v-if="photos">
-      <img :src="photos[0].filename" :alt="photos[0].name" />
+    <div class="flex justify-center items-center w-full h-screen" v-if="photos">
+      <img
+        class="max-w-full max-h-full"
+        :src="photos[0].filename"
+        :alt="photos[0].name"
+      />
     </div>
   </div>
 </template>

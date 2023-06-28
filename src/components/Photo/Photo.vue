@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue';
 
+import IOMLButton from '../Buttons/IOMLButton.vue';
+
 const props = defineProps({
   photo: Object,
   albumId: String,
@@ -25,42 +27,30 @@ const toggleOverlay = () => {
       class="absolute bottom-0 w-full h-16 bg-black bg-opacity-50 rounded-br-xl rounded-bl-xl flex items-center justify-evenly"
       v-if="showOverlay"
     >
-      <button
-        class="p-2 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+      <router-link
+        :to="{
+          name: 'photos-details',
+          params: { albumid: albumId, photoid: photo.id },
+        }"
       >
-        <router-link
-          :to="{
-            name: 'photos-details',
-            params: { albumid: albumId, photoid: photo.id },
-          }"
-        >
-          <img class="h-8" src="/view.svg" alt="View Photo" />
-        </router-link>
-      </button>
-      <button
-        class="p-2 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+        <IOMLButton :icon="'/view.svg'" :alt="'View'" />
+      </router-link>
+      <router-link
+        :to="{
+          name: 'photos-edit',
+          params: { albumid: albumId, photoid: photo.id },
+        }"
       >
-        <router-link
-          :to="{
-            name: 'photos-edit',
-            params: { albumid: albumId, photoid: photo.id },
-          }"
-        >
-          <img class="h-8" src="/edit.svg" alt="Edit Photo" />
-        </router-link>
-      </button>
-      <button
-        class="p-2 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+        <IOMLButton :icon="'/edit.svg'" :alt="'Edit'" />
+      </router-link>
+      <router-link
+        :to="{
+          name: 'photos-delete',
+          params: { albumid: albumId, photoid: photo.id },
+        }"
       >
-        <router-link
-          :to="{
-            name: 'photos-delete',
-            params: { albumid: albumId, photoid: photo.id },
-          }"
-        >
-          <img class="h-8" src="/delete.svg" alt="Delete Photo" />
-        </router-link>
-      </button>
+        <IOMLButton :icon="'/delete.svg'" :alt="'Delete'" />
+      </router-link>
     </div>
   </div>
 </template>
