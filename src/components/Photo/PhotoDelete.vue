@@ -5,7 +5,8 @@ import { toast } from 'vue3-toastify';
 import { useI18n } from 'vue-i18n';
 import axios from 'axios';
 
-import IOMLActionButton from '../Buttons/IOMLActionButton.vue';
+import IOMLAcceptButton from '../Buttons/IOMLAcceptButton.vue';
+import IOMLCancelButton from '../Buttons/IOMLCancelButton.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -62,17 +63,15 @@ async function handleDeletePhoto() {
       />
     </div>
     <div class="flex flex-wrap flex-row justify-evenly pt-10">
-      <IOMLActionButton
+      <IOMLCancelButton
         :action="goBack"
         :icon="'/cancel.svg'"
         :altText="'Cancel'"
-        :color="'red'"
       />
-      <IOMLActionButton
+      <IOMLAcceptButton
         :action="handleDeletePhoto"
         :icon="'/accept.svg'"
         :altText="'Accept'"
-        :color="'green'"
       />
     </div>
   </div>
