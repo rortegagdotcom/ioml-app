@@ -14,12 +14,13 @@ const route = useRoute();
 const { t } = useI18n();
 
 const albums = ref(null);
+
 const albumId = route.params.albumid;
 
 watchEffect(async () => {
   if (albumId) {
     await axios
-      .get(`http://localhost:5748/api/albums/${albumId}`)
+      .get(`/api/albums/${albumId}`)
       .then((res) => {
         albums.value = res.data[0];
       })
@@ -35,14 +36,14 @@ function goBack() {
 
 async function handleDeleteAlbum() {
   await axios
-    .delete(`http://localhost:5748/api/albums/${albumId}`)
+    .delete(`/api/albums/${albumId}`)
     .then(() => {
       toast.success(t('toastAlbumDeleted'));
       console.log('Album deleted');
     })
     .catch((error) => {
       console.log('Error when deleting the album', error);
-      toast.error('Error when deleting the album');
+      toast.error(t('toastErrorDeleteAlbum'));
     });
 
   setTimeout(() => {

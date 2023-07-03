@@ -14,13 +14,14 @@ const route = useRoute();
 const { t } = useI18n();
 
 const photos = ref(null);
+
 const albumId = route.params.albumid;
 const photoId = route.params.photoid;
 
 watchEffect(async () => {
   if (albumId && photoId) {
     await axios
-      .get(`http://localhost:5748/api/albums/${albumId}/photo/${photoId}`)
+      .get(`/api/albums/${albumId}/photo/${photoId}`)
       .then((res) => {
         photos.value = res.data[0];
       })
@@ -36,14 +37,14 @@ function goBack() {
 
 async function handleDeletePhoto() {
   await axios
-    .delete(`http://localhost:5748/api/photos/${photoId}`)
+    .delete(`/api/photos/${photoId}`)
     .then(() => {
       console.log('Photo deleted');
       toast.success(t('toastPhotoDeleted'));
     })
     .catch((error) => {
       console.log('Error when deleting photo', error);
-      toast.error('Error when deleting photo');
+      toast.error(t('toastErrorDeletePhoto'));
     });
 
   setTimeout(() => {

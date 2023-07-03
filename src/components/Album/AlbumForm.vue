@@ -23,7 +23,7 @@ async function createOrEditAlbum() {
   if (albumId) {
     await axios
       .put(
-        `http://localhost:5748/api/albums/${albumId}`,
+        `/api/albums/${albumId}`,
         {
           name: albumName.value,
           cover: coverName.value,
@@ -40,12 +40,12 @@ async function createOrEditAlbum() {
       })
       .catch((error) => {
         console.error('Error when sending data: ', error);
-        toast.error('Error when updating the album');
+        toast.error(t('toastErrorUpdateAlbum'));
       });
   } else {
     await axios
       .post(
-        'http://localhost:5748/api/albums',
+        '/api/albums',
         {
           name: albumName.value,
           cover: coverName.value,
@@ -62,7 +62,7 @@ async function createOrEditAlbum() {
       })
       .catch((error) => {
         console.error('Error when sending data: ', error);
-        toast.error('Error when creating the album');
+        toast.error(t('toastErrorAddAlbum'));
       });
   }
 

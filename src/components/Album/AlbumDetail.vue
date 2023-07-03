@@ -12,12 +12,13 @@ const { t } = useI18n();
 
 const albums = ref(null);
 const photos = ref(null);
+
 const albumId = route.params.albumid;
 
 watchEffect(async () => {
   if (albumId) {
     await axios
-      .get(`http://localhost:5748/api/albums/${albumId}`)
+      .get(`/api/albums/${albumId}`)
       .then((res) => {
         albums.value = res.data[0];
       })
@@ -30,7 +31,7 @@ watchEffect(async () => {
 watchEffect(async () => {
   if (albums) {
     await axios
-      .get(`http://localhost:5748/api/albums/${albumId}/photos`)
+      .get(`/api/albums/${albumId}/photos`)
       .then((res) => {
         photos.value = res.data[0];
       })
@@ -61,7 +62,7 @@ watchEffect(async () => {
     <Photo
       class="cursor-pointer"
       v-for="photo in photos"
-      :albumId="`${albums[0].id}`"
+      :albumId="`${albumId}`"
       :photo="photo"
       :key="photo.id"
     />

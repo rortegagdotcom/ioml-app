@@ -10,12 +10,13 @@ import 'swiper/css/navigation';
 
 const route = useRoute();
 
-const albumId = route.params.albumid;
 const photos = ref([]);
+
+const albumId = route.params.albumid;
 
 watchEffect(async () => {
   await axios
-    .get(`http://localhost:5748/api/albums/${albumId}/photos`)
+    .get(`/api/albums/${albumId}/photos`)
     .then((res) => {
       photos.value = res.data[0];
     })
@@ -23,13 +24,6 @@ watchEffect(async () => {
       console.error(error);
     });
 });
-
-const modules = [Navigation, Autoplay];
-const autoplay = {
-  delay: 300000,
-  disableOnInteraction: false,
-};
-const loop = true;
 
 const showComponents = inject('showComponents');
 
@@ -40,6 +34,13 @@ onMounted(() => {
 onUnmounted(() => {
   showComponents.value = true;
 });
+
+const modules = [Navigation, Autoplay];
+const autoplay = {
+  delay: 300000,
+  disableOnInteraction: false,
+};
+const loop = true;
 </script>
 <template>
   <div class="fixed top-0 left-0 w-full h-full z-50">

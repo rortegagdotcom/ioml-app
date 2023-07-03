@@ -4,7 +4,6 @@ import { useRoute, useRouter } from 'vue-router';
 import { toast } from 'vue3-toastify';
 import { useI18n } from 'vue-i18n';
 import axios from 'axios';
-import imageCompression from 'browser-image-compression';
 
 import IOMLFormButton from '../Buttons/IOMLFormButton.vue';
 
@@ -13,38 +12,20 @@ const router = useRouter();
 
 const { t } = useI18n();
 
-const albumId = route.params.albumid;
-const photoId = route.params.photoid;
 const photoFile = ref(null);
 
-async function compressImage(file) {
-  try {
-    const options = {
-      maxSizeMB: 1,
-      maxWidthOrHeight: 1920,
-      useWebWorker: true,
-    };
-    const compressedFile = await imageCompression(file, options);
-    return compressedFile;
-  } catch (error) {
-    console.error('Error al comprimir la imagen:', error);
-    return null;
-  }
-}
+const albumId = route.params.albumid;
+const photoId = route.params.photoid;
 
 async function createOrEditPhoto() {
   if (photoId) {
     const formData = new FormData();
 
-    const originalFile = photoFile.value.files[0];
-    const compressedFile = await compressImage(originalFile);
-
-    if (!compressedFile) formData.append('photo', photoFile.value.files[0]);
-    else formData.append('photo', compressImage);
+    formData.append('photo', photoFile.value.files[0]);
     formData.append('photoId', photoId);
 
     await axios
-      .put(`http://localhost:5748/api/photos/${photoId}`, formData, {
+      .put(`/api/photos/${photoId}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -55,6 +36,7 @@ async function createOrEditPhoto() {
       })
       .catch((error) => {
         console.error('Error when sending data:', error);
+        toast.error(t('toastErrorUpdatePhoto'));
       });
 
     setTimeout(() => {
@@ -63,16 +45,15 @@ async function createOrEditPhoto() {
   } else {
     const formData = new FormData();
 
+    toast.info(t('toastPhotosUploading'));
+
     for (let i = 0; i < photoFile.value.files.length; i++) {
-      const originalFile = photoFile.value.files[i];
-      const compressedFile = await compressImage(originalFile);
-      if (!compressedFile) formData.append('photo', compressedFile);
-      else formData.append('photo', photoFile.value.files[i]);
+      formData.append('photo', photoFile.value.files[i]);
     }
     formData.append('albumId', albumId);
 
     await axios
-      .post('http://localhost:5748/api/photos', formData, {
+      .post('/api/photos', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -83,7 +64,7 @@ async function createOrEditPhoto() {
       })
       .catch((error) => {
         console.error('Error when adding photos: ', error);
-        toast.error('Error when adding photos');
+        toast.error(t('toastErrorAddPhotos'));
       });
   }
 
@@ -113,7 +94,7 @@ async function createOrEditPhoto() {
         name="photo-file"
         id="photo-file"
         ref="photoFile"
-        accept="image/*"
+        accept=".png, .jpg, .jpeg"
         :multiple="!photoId"
         required
       />

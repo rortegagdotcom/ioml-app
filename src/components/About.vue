@@ -27,9 +27,6 @@ const { t } = useI18n();
       <li class="text-xl text-gray-900 dark:text-gray-50">vue-i18n</li>
       <li class="text-xl text-gray-900 dark:text-gray-50">axios</li>
       <li class="text-xl text-gray-900 dark:text-gray-50">swiper</li>
-      <li class="text-xl text-gray-900 dark:text-gray-50">
-        browser-image-compression
-      </li>
     </ul>
     <p class="text-xl text-gray-900 dark:text-gray-50 mt-5">API:</p>
     <ul>
@@ -37,6 +34,7 @@ const { t } = useI18n();
       <li class="text-xl text-gray-900 dark:text-gray-50">express</li>
       <li class="text-xl text-gray-900 dark:text-gray-50">multer</li>
       <li class="text-xl text-gray-900 dark:text-gray-50">mysql2</li>
+      <li class="text-xl text-gray-900 dark:text-gray-50">sharp</li>
       <li class="text-xl text-gray-900 dark:text-gray-50">dotenv</li>
       <li class="text-xl text-gray-900 dark:text-gray-50">cors</li>
     </ul>

@@ -16,7 +16,7 @@ const props = defineProps({
       >
         <div class="h-3/4" :class="`bg-${album.cover}`"></div>
         <h2
-          class="absolute text-[1.5em] text-gray-900 max-w-[180px] text-ellipsis overflow-hidden left-2.5 bottom-2.5 dark:text-gray-50"
+          class="absolute text-[1.5em] text-gray-900 max-w-[180px] whitespace-nowrap text-ellipsis overflow-hidden left-2.5 bottom-2.5 dark:text-gray-50"
         >
           {{ album.name }}
         </h2>
@@ -37,7 +37,7 @@ const props = defineProps({
 </template>
 
 <style>
-/* Se importan estilos CSS de los covers, por que no pone el background-image con TailwindCSS en su configuración */
+/* CSS styles are imported from the covers, background-image is not updated with TailwindCSS in your configuration */
 @import '../Covers/css/covers/wave.css';
 @import '../Covers/css/covers/cage.css';
 @import '../Covers/css/covers/cloud.css';

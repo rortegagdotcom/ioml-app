@@ -4,14 +4,16 @@ import { useRoute } from 'vue-router';
 import axios from 'axios';
 
 const route = useRoute();
+
 const photos = ref(null);
+
 const albumId = route.params.albumid;
 const photoId = route.params.photoid;
 
 watchEffect(async () => {
   if (albumId && photoId) {
     await axios
-      .get(`http://localhost:5748/api/albums/${albumId}/photo/${photoId}`)
+      .get(`/api/albums/${albumId}/photo/${photoId}`)
       .then((res) => {
         photos.value = res.data[0];
       })

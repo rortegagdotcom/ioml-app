@@ -11,7 +11,7 @@ const { t } = useI18n();
 
 watchEffect(async () => {
   await axios
-    .get('http://localhost:5748/api/albums')
+    .get('/api/albums')
     .then((res) => {
       albums.value = res.data[0];
     })

@@ -15,6 +15,8 @@ const props = defineProps({
   setActiveTab: Function,
 });
 
+const emit = defineEmits(['cover-clicked']);
+
 const tabs = ref([
   {
     name: 'Wave',
@@ -60,19 +62,17 @@ const tabs = ref([
 
 const activeTab = ref(0);
 
+const selectedIndex = ref(0);
+
 function setActiveTab(index) {
   selectedIndex.value = null;
   activeTab.value = index;
 }
 
-const emit = defineEmits(['cover-clicked']);
-
 function handleCoverClick(cover) {
   cover = cover.substring(cover.lastIndexOf('/') + 1, cover.length - 4);
   emit('cover-clicked', cover);
 }
-
-const selectedIndex = ref(0);
 
 function selectImage(index) {
   selectedIndex.value = index;

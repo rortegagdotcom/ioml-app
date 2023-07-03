@@ -6,7 +6,9 @@ import IOMLButton from './Buttons/IOMLButton.vue';
 
 const addAlbumPhoto = computed(() => {
   const route = useRoute();
+
   const albumId = route.params.albumid;
+
   if (
     route.name === 'albums' ||
     route.name === 'albums-new' ||
@@ -19,13 +21,16 @@ const addAlbumPhoto = computed(() => {
 
 const viewPhotosFullScreen = computed(() => {
   const route = useRoute();
+
   const albumId = route.params.albumid;
+
   if (route.name === 'albums-details') return `/view/${albumId}`;
   else return '/';
 });
 
 const logoUrl = computed(() => {
   const route = useRoute();
+
   if (route.name === 'albums-details') {
     return {
       dark: '/fullscreen-dark.svg',
