@@ -22,7 +22,7 @@ watchEffect(async () => {
     await axios
       .get(`/api/albums/${albumId}`)
       .then((res) => {
-        albums.value = res.data[0];
+        albums.value = res.data;
       })
       .catch((error) => {
         console.error(error);
@@ -67,7 +67,7 @@ async function handleDeleteAlbum() {
         <h2
           class="absolute text-[1.5em] text-gray-900 max-w-[180px] text-ellipsis overflow-hidden left-2.5 bottom-2.5 dark:text-gray-50"
         >
-          {{ albums[0].name }}
+          {{ albums.name }}
         </h2>
       </div>
     </div>

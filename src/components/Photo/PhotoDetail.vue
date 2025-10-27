@@ -39,8 +39,8 @@ onUnmounted(() => {
     <div class="flex justify-center items-center w-full h-screen" v-if="photos">
       <img
         class="max-w-full max-h-full"
-        :src="photos[0].filename"
-        :alt="photos[0].name"
+        :src="photos.filename"
+        :alt="photos.name"
       />
     </div>
   </div>

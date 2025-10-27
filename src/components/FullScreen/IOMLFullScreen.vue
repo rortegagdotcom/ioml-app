@@ -1,9 +1,10 @@
 <script setup>
-import { ref, inject, onMounted, onUnmounted, watchEffect } from 'vue';
+import { ref, inject, onMounted, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router';
+
 import axios from 'axios';
-import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation, Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/vue';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -14,15 +15,18 @@ const photos = ref([]);
 
 const albumId = route.params.albumid;
 
-watchEffect(async () => {
-  await axios
-    .get(`/api/albums/${albumId}/photos`)
-    .then((res) => {
-      photos.value = res.data[0];
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+async function fetchPhotos() {
+  try {
+    const res = await axios.get(`/api/albums/${albumId}/photos`);
+    photos.value = res.data ?? [];
+    console.log('Photos loaded:', photos.value);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+onMounted(() => {
+  fetchPhotos();
 });
 
 const showComponents = inject('showComponents');
@@ -44,14 +48,14 @@ const loop = true;
 </script>
 <template>
   <div class="fixed top-0 left-0 w-full h-full z-50">
-    <swiper
+    <Swiper
       :navigation="true"
       :modules="modules"
       :autoplay="autoplay"
       :loop="loop"
       class="mySwiper"
     >
-      <swiper-slide v-for="(photo, index) in photos" :key="index">
+      <SwiperSlide v-for="(photo, index) in photos" :key="photo.id ?? index">
         <div class="flex justify-center items-center w-full h-screen">
           <img
             class="max-w-full max-h-full"
@@ -59,8 +63,8 @@ const loop = true;
             :alt="photo.name"
           />
         </div>
-      </swiper-slide>
-    </swiper>
+      </SwiperSlide>
+    </Swiper>
   </div>
 </template>
 <style>

@@ -23,7 +23,7 @@ watchEffect(async () => {
     await axios
       .get(`/api/albums/${albumId}/photo/${photoId}`)
       .then((res) => {
-        photos.value = res.data[0];
+        photos.value = res.data;
       })
       .catch((error) => {
         console.error(error);
@@ -59,8 +59,8 @@ async function handleDeletePhoto() {
     <div className="flex relative justify-center" v-if="photos">
       <img
         class="rounded-xl w-full 2xl:w-1/2"
-        :src="`${photos[0].filename}`"
-        :alt="`${photos[0].id}`"
+        :src="`${photos.filename}`"
+        :alt="`${photos.id}`"
       />
     </div>
     <div class="flex flex-wrap flex-row justify-evenly pt-10">

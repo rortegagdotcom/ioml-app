@@ -20,7 +20,7 @@ watchEffect(async () => {
     await axios
       .get(`/api/albums/${albumId}`)
       .then((res) => {
-        albums.value = res.data[0];
+        albums.value = res.data;
       })
       .catch((error) => {
         console.error(error);
@@ -33,7 +33,7 @@ watchEffect(async () => {
     await axios
       .get(`/api/albums/${albumId}/photos`)
       .then((res) => {
-        photos.value = res.data[0];
+        photos.value = res.data;
       })
       .catch((error) => {
         console.error(error);
@@ -47,7 +47,7 @@ watchEffect(async () => {
     class="text-center text-2xl font-bold text-gray-900 m-5 dark:text-gray-50"
     v-if="albums"
   >
-    {{ albums[0].name }}
+    {{ albums.name }}
   </h1>
   <h2
     class="text-center text-2xl font-bold text-gray-900 m-5 dark:text-gray-50"

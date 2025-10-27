@@ -13,7 +13,7 @@ watchEffect(async () => {
   await axios
     .get('/api/albums')
     .then((res) => {
-      albums.value = res.data[0];
+      albums.value = res.data;
     })
     .catch((error) => {
       console.error(error);
